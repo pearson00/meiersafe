@@ -2,12 +2,12 @@
 
 The website for Mike Meier's *Lessons Learned and Murphy's Corollary*.
 
-**Status: design prototypes.** Three directions (A Reference, B Briefing, C Narrative) share the same pages and text; only the theme differs.
+**Status: design prototypes.** Four directions (A Reference, B Briefing, C Narrative, D Briefing quieter) share the same pages and text; only the theme differs.
 
 - `src/` — the pages, written once, with a `{{LABEL}}` placeholder for the prototype name
 - `themes/` — one stylesheet per design
-- `chooser.html` — the landing page that links the three designs
-- `scripts/build.sh` — builds `site/` (chooser plus `a/`, `b/`, `c/`)
+- `chooser.html` — the landing page that links the four designs
+- `scripts/build.sh` — builds `site/` (chooser plus `a/` to `d/`)
 - `site/` — the built site, committed; Cloudflare Pages publishes this folder with no build step
 
 Rebuild after editing `src/` or `themes/`:

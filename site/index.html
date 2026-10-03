@@ -22,15 +22,22 @@
   h3 { margin-top: 2rem; }
   ol li { margin-bottom: .4rem; }
   .small { font-size: .9rem; color: var(--muted); }
-  @media (min-width: 48rem) { .cards { grid-template-columns: repeat(3, 1fr); } }
+  .card-new { border: 2px solid var(--ink); }
+  .new { font-size: .75rem; font-weight: 600; background: #f2a900; color: #1b1300; padding: .1rem .4rem; border-radius: 3px; vertical-align: middle; white-space: nowrap; }
+  @media (min-width: 48rem) { .cards { grid-template-columns: repeat(3, 1fr); } .card-new { grid-column: 1 / -1; } }
 </style>
 </head>
 <body>
 <main>
-  <h1>meiersafe.com: three design directions</h1>
+  <h1>meiersafe.com: four design directions</h1>
   <p class="intro">Each prototype has the same three pages and the same words, taken from the 2015 paper and the 2021 letter and not yet edited. Only the look differs. Open each one on your phone and your computer, and try printing a page.</p>
 
   <div class="cards">
+    <a class="card card-new" href="d/">
+      <div class="swatch"><span style="background:#12304a"></span><span style="background:#f2a900"></span><span style="background:#ffffff"></span></div>
+      <h2>D · Briefing, quieter <span class="new">New Oct 3</span></h2>
+      <p>B's boxes and numbered sections, with A's easier reading text and smaller, lighter headings. Notes move to the margin on wide screens. Built from Mike's comments.</p>
+    </a>
     <a class="card" href="a/">
       <div class="swatch"><span style="background:#fbf9f4"></span><span style="background:#1f1d1a"></span><span style="background:#8b1e1e"></span></div>
       <h2>A · Reference</h2>
@@ -47,6 +54,13 @@
       <p>Story first: a dark, full-width opening, large type and big quotes. Room for flight photos and slides.</p>
     </a>
   </div>
+
+  <h3>Changed on October 3, in all four designs</h3>
+  <ul>
+    <li><strong>Home page:</strong> a short "What this site is" introduction and the reading order, following the paper.</li>
+    <li><strong>Try the numbers:</strong> wider boxes that fit 99.999 and more, and small results shown properly (0.018%, not 0.0%).</li>
+    <li><strong>The 1995 top landing:</strong> a "Read first" link to the warning signs in Murphy's Corollary, and Mike's correction to the background.</li>
+  </ul>
 
   <h3>What to look at</h3>
   <ol>

@@ -7,20 +7,24 @@
   if (!p || !n || !out || !odds) return;
 
   function update() {
-    var ps = parseFloat(p.value) / 100;
+    var pv = parseFloat(p.value);
     var ns = parseInt(n.value, 10);
-    if (!(ps > 0 && ps < 1) || !(ns >= 1)) {
+    if (!(pv > 0 && pv < 100) || !(ns >= 1)) {
       out.textContent = "–";
       odds.textContent = "enter a percentage below 100 and a whole number of times";
       return;
     }
-    var fail = 1 - Math.pow(ps, ns);
+    // Work from the chance of failure each time, so many nines (99.999) keep their precision.
+    var q = (100 - pv) / 100;
+    var fail = -Math.expm1(ns * Math.log1p(-q));
     var pct = fail * 100;
-    out.textContent = (pct < 1 ? pct.toFixed(1) : Math.round(pct)) + "%";
+    out.textContent = (pct < 10
+      ? pct.toLocaleString("en-US", { maximumSignificantDigits: 2 })
+      : Math.round(pct)) + "%";
     var oneIn = 1 / fail;
     odds.textContent = oneIn < 1.05
       ? "close to certain"
-      : "about one chance in " + (oneIn < 10 ? Math.round(oneIn) : Math.round(oneIn).toLocaleString());
+      : "about one chance in " + (oneIn < 10 ? Math.round(oneIn) : Math.round(oneIn).toLocaleString("en-US"));
   }
 
   p.addEventListener("input", update);

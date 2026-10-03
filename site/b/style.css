@@ -49,13 +49,13 @@ svg .track { fill: none; stroke: var(--navy); stroke-width: 2.5; }
 svg .touch { fill: var(--navy); }
 svg .label { font: 500 13px var(--sans); fill: var(--navy); }
 
-.question, .framework, .calculator { max-width: 44rem; }
+.intro, .question, .framework, .calculator { max-width: 44rem; }
 section h2 { font-size: 1.4rem; color: var(--navy); margin: 2.25rem 0 .75rem; }
 .calculator { background: var(--amber-tint); border-left: 6px solid var(--amber); padding: .25rem 1.5rem 1rem; margin: 2rem 0; }
 .calc-sentence { font-size: 1.25rem; line-height: 2; font-weight: 500; }
-.calc-sentence input { font: inherit; width: 4.6ch; border: 2px solid var(--navy); border-radius: 3px; text-align: center; background: #fff; color: var(--navy); -moz-appearance: textfield; }
+.calc-sentence input { font: inherit; width: 9ch; border: 2px solid var(--navy); border-radius: 3px; text-align: center; background: #fff; color: var(--navy); -moz-appearance: textfield; }
 .calc-sentence input::-webkit-inner-spin-button { -webkit-appearance: none; }
-#calc-n { width: 3.8ch; }
+#calc-n { width: 4.5ch; }
 .calc-sentence output { font-weight: 700; background: var(--navy); color: #fff; padding: .05rem .4rem; border-radius: 3px; }
 .calc-note { font-size: .92rem; color: var(--muted); }
 
@@ -116,6 +116,14 @@ blockquote.pull { margin: 1.25rem 0; padding: .25rem 0 .25rem 1rem; border-left:
 .cite pre { font-size: .8rem; background: var(--panel); padding: .75rem; overflow-x: auto; }
 .license-line { font-size: .88rem; color: var(--muted); }
 .site-footer { background: var(--panel); padding: 1.5rem max(1rem, calc((100% - 70rem) / 2)); font-size: .85rem; color: var(--muted); }
+
+
+/* Home introduction and reading order; case-study prerequisite */
+.path { padding-left: 1.4rem; }
+.path li { margin: 0 0 .3rem; }
+.path li::marker { font-weight: 700; color: var(--navy); }
+.path .nav-off { color: var(--muted); }
+.read-first { background: var(--panel); border-left: 6px solid var(--navy); padding: .6rem 1rem; margin: 0 0 1.25rem; font-size: .95rem; max-width: 44rem; }
 
 @media (min-width: 60rem) {
   .hero { grid-template-columns: 1.1fr 1fr; align-items: center; }

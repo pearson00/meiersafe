@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="page-home">
-<div class="proto-banner">Prototype C · Narrative · draft for Mike's review · text from the 2015 paper, not yet edited · <a href="../">compare all three designs</a></div>
+<div class="proto-banner">Prototype C · Narrative · draft for Mike's review · text from the 2015 paper, not yet edited · <a href="../">compare all designs</a></div>
 
 <header class="site-header">
   <a class="site-name" href="./">meiersafe<span>.com</span></a>
@@ -42,6 +42,22 @@
     </figure>
   </section>
 
+  <section class="intro" aria-labelledby="intro-title">
+    <h2 id="intro-title">What this site is</h2>
+    <p>Mike Meier has been test flying since 1976, including production test flights of hang gliders for Wills Wing. In 2015 he presented <em>Lessons Learned and Murphy's Corollary</em> to the Society of Experimental Test Pilots: a paper about why a long record of success can hide real danger, and why the decision to go matters more than how well we fly.</p>
+    <p>The paper builds its argument one step at a time. This site keeps that order. Start with the question below, then read:</p>
+    <ol class="path">
+      <li><a href="#fw-title">The framework</a>: two premises, three factors and a remedy, on this page</li>
+      <li><span class="nav-off">Factor I · Deceptive mathematics</span></li>
+      <li><a href="murphys-corollary/">Factor II · Murphy's Corollary</a></li>
+      <li><span class="nav-off">Factor III · The pressure to go</span></li>
+      <li><span class="nav-off">The remedy · Analyze your successes</span></li>
+      <li><a href="case-studies/top-landing-1995/">Case studies</a>, starting with the 1995 top landing</li>
+      <li><span class="nav-off">The full paper and the briefing video</span></li>
+    </ol>
+    <p class="draft-flag">Draft: this introduction and reading order are Steve's, for Mike's review. Grey items are pages not built yet.</p>
+  </section>
+
   <section class="question" aria-labelledby="roulette">
     <h2 id="roulette">Would you play?</h2>
     <p>Imagine that you need a significant amount of money, with no obvious way to get it, and with serious consequences if you don't. Someone offers you ten million dollars to play a single game of Russian roulette. One bullet, six chambers, one pull of the trigger. If the gun fires, you're dead. If not, you get the ten million.</p>
@@ -52,8 +68,8 @@
     <h2 id="calc-title">Try the numbers</h2>
     <p class="calc-sentence">
       A go decision that succeeds
-      <label><span class="visually-hidden">probability of success, percent</span><input id="calc-p" type="number" min="50" max="99.99" step="0.1" value="99"></label>% of the time,
-      made <label><span class="visually-hidden">number of times</span><input id="calc-n" type="number" min="1" max="1000" step="1" value="18"></label> times,
+      <label><span class="visually-hidden">probability of success, percent</span><input id="calc-p" type="text" inputmode="decimal" autocomplete="off" value="99"></label>% of the time,
+      made <label><span class="visually-hidden">number of times</span><input id="calc-n" type="text" inputmode="numeric" autocomplete="off" value="18"></label> times,
       fails at least once <output id="calc-out" for="calc-p calc-n">17%</output> of the time:
       <span id="calc-odds">about one chance in 6</span>.
     </p>

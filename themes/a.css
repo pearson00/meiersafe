@@ -49,9 +49,9 @@ section { max-width: 38rem; }
 section h2, .body h2 { font-weight: 600; font-size: 1.35rem; margin: 2.5rem 0 .75rem; }
 .calculator { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: .5rem 0 1.25rem; margin: 2.5rem 0; }
 .calc-sentence { font-size: 1.3rem; line-height: 1.9; }
-.calc-sentence input { font: inherit; width: 4.2ch; border: 0; border-bottom: 2px solid var(--accent); background: var(--tint); color: var(--accent); text-align: center; padding: 0 .1rem; -moz-appearance: textfield; }
+.calc-sentence input { font: inherit; border: 0; border-bottom: 2px solid var(--accent); background: var(--tint); color: var(--accent); text-align: center; padding: 0 .1rem; width: 8.5ch; -moz-appearance: textfield; }
 .calc-sentence input::-webkit-inner-spin-button { -webkit-appearance: none; }
-#calc-n { width: 3.4ch; }
+#calc-n { width: 4.5ch; }
 .calc-sentence output { font-weight: 600; color: var(--accent); }
 .calc-note { font-size: .95rem; color: var(--muted); }
 
@@ -110,6 +110,13 @@ blockquote.pull { font-style: italic; margin: 1.5rem 0; padding-left: 1.25rem; b
 .site-footer { max-width: 60rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; border-top: 1px solid var(--rule); font: 400 .85rem var(--sans); color: var(--muted); }
 
 /* Wide screens: notes move into the margin, Tufte-style. */
+
+/* Home introduction and reading order; case-study prerequisite */
+.path { padding-left: 1.4rem; }
+.path li { margin: 0 0 .3rem; padding-left: .3rem; }
+.path li::marker { font-weight: 600; color: var(--accent); }
+.read-first { font: 400 .95rem/1.5 var(--sans); background: var(--tint); padding: .6rem .9rem; margin: 0 0 1.5rem; }
+
 @media (min-width: 64rem) {
   .article, main { padding-left: 2rem; }
   .body > .note { float: right; clear: right; width: 15rem; margin: .35rem -18.5rem 1rem 0; }
