@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Murphy's Corollary — Mike Meier on safety and the go decision</title>
+<meta name="description" content="Anything that did not go wrong could not have gone wrong. Mike Meier's framework for why repeated success hides risk in flight test.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-home">
+<div class="proto-banner">Prototype B · Briefing · draft for Mike's review · text from the 2015 paper, not yet edited · <a href="../">compare all three designs</a></div>
+
+<header class="site-header">
+  <a class="site-name" href="./">meiersafe<span>.com</span></a>
+  <nav class="site-nav" aria-label="Main">
+    <span class="nav-off">Framework</span>
+    <a href="case-studies/top-landing-1995/">Case studies</a>
+    <span class="nav-off">The paper</span>
+    <span class="nav-off">Briefing</span>
+    <span class="nav-off">About</span>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="kicker">Mike Meier · Lessons Learned and Murphy's Corollary</p>
+    <h1>Anything that did not go wrong could not have gone wrong.</h1>
+    <p class="lede">Nobody believes Murphy's Law. But we are surprisingly susceptible to its corollary: we take a positive outcome as evidence that a positive outcome was inevitable.</p>
+    <figure class="hero-figure">
+      <svg viewBox="0 0 640 260" role="img" aria-labelledby="hero-svg-title">
+        <title id="hero-svg-title">Schematic of the top-landing approach: a long run of successful landings on the upslope just below the hilltop, with turbulence and wind gradient on short final.</title>
+        <path class="ground" d="M0 250 L120 250 Q260 240 360 120 Q400 70 450 62 L640 60 L640 260 L0 260 Z"/>
+        <path class="zone" d="M300 150 Q340 110 380 98 L392 130 Q350 150 318 180 Z"/>
+        <path class="track" d="M40 40 Q200 30 260 90 Q300 128 352 120 Q372 112 384 104"/>
+        <circle class="touch" cx="386" cy="102" r="5"/>
+        <text x="292" y="205" class="label">turbulence and wind gradient</text>
+        <text x="400" y="96" class="label">flare on the upslope</text>
+        <text x="40" y="28" class="label">1,500 landings in 15 years</text>
+      </svg>
+      <figcaption>The top landing Mike made some 1,500 times over fifteen years, until the day it went wrong. Schematic, not to scale.</figcaption>
+    </figure>
+  </section>
+
+  <section class="question" aria-labelledby="roulette">
+    <h2 id="roulette">Would you play?</h2>
+    <p>Imagine that you need a significant amount of money, with no obvious way to get it, and with serious consequences if you don't. Someone offers you ten million dollars to play a single game of Russian roulette. One bullet, six chambers, one pull of the trigger. If the gun fires, you're dead. If not, you get the ten million.</p>
+    <p>Most people say no. Yet a go decision that is 99 percent safe, made again and again, carries the same odds sooner than you'd think.</p>
+  </section>
+
+  <section class="calculator" aria-labelledby="calc-title">
+    <h2 id="calc-title">Try the numbers</h2>
+    <p class="calc-sentence">
+      A go decision that succeeds
+      <label><span class="visually-hidden">probability of success, percent</span><input id="calc-p" type="number" min="50" max="99.99" step="0.1" value="99"></label>% of the time,
+      made <label><span class="visually-hidden">number of times</span><input id="calc-n" type="number" min="1" max="1000" step="1" value="18"></label> times,
+      fails at least once <output id="calc-out" for="calc-p calc-n">17%</output> of the time:
+      <span id="calc-odds">about one chance in 6</span>.
+    </p>
+    <p class="calc-note">The overall chance of success is the chance of each success raised to the power of the number of trials. At 99 percent, eighteen go decisions leave a one-in-six chance that at least one fails, the same odds as the revolver.</p>
+  </section>
+
+  <section class="framework" aria-labelledby="fw-title">
+    <h2 id="fw-title">The framework</h2>
+    <p class="fw-intro">Two premises, three factors that work together against good decisions, and a remedy.</p>
+    <ol class="fw-list">
+      <li id="premises">
+        <strong>Two premises.</strong> The primary determinant of safety is the quality of decision making. And when a negative outcome could be catastrophic, the go decision must be made only with a very high degree of confidence in a positive outcome.
+      </li>
+      <li id="factor-1">
+        <strong>Factor I · Deceptive mathematics.</strong> High odds produce long strings of success, and each success seems to confirm the decision. But small risks, repeated, add up: 99 percent, eighteen times, is one chance in six of failure.
+      </li>
+      <li id="factor-2">
+        <a href="murphys-corollary/"><strong>Factor II · Murphy's Corollary.</strong></a> If nothing did go wrong, we come to believe nothing could have gone wrong. A positive outcome is taken as proof that the decision was sound, and standards slowly slip.
+      </li>
+      <li id="factor-3">
+        <strong>Factor III · The pressure to go.</strong> Deadlines, budgets, expectations and ego push us to go when we have doubts. A go decision relieves the pressure; a no-go only increases it the next time.
+      </li>
+      <li id="remedy">
+        <strong>The remedy · Analyze your successes.</strong> Stay aware of these tendencies, set a quantitative safety metric and a target beforehand, and measure every success against it, to find the ones that were really luck.
+      </li>
+    </ol>
+    <p class="fw-more">Extension: <em>Lucky or Good – Further Thoughts</em> (2021) on skill, judgment and luck.</p>
+  </section>
+
+  <section class="cta" aria-label="Next steps">
+    <a class="cta-primary" href="murphys-corollary/">Read Factor II: Murphy's Corollary</a>
+    <a class="cta-secondary" href="case-studies/top-landing-1995/">Case study: the 1995 top landing</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p><em>Murphy's Corollary</em> by Mike Meier, meiersafe.com, is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Third-party material is excluded.</p>
+</footer>
+<script src="calc.js"></script>
+</body>
+</html>
