@@ -4,6 +4,7 @@
   var n = document.getElementById("calc-n");
   var out = document.getElementById("calc-out");
   var odds = document.getElementById("calc-odds");
+  var half = document.getElementById("calc-half"); // optional: decisions until failure passes 50%
   if (!p || !n || !out || !odds) return;
 
   function update() {
@@ -12,10 +13,12 @@
     if (!(pv > 0 && pv < 100) || !(ns >= 1)) {
       out.textContent = "–";
       odds.textContent = "enter a percentage below 100 and a whole number of times";
+      if (half) half.textContent = "–";
       return;
     }
     // Work from the chance of failure each time, so many nines (99.999) keep their precision.
     var q = (100 - pv) / 100;
+    if (half) half.textContent = Math.ceil(Math.log(0.5) / Math.log1p(-q)).toLocaleString("en-US");
     var fail = -Math.expm1(ns * Math.log1p(-q));
     var pct = fail * 100;
     out.textContent = (pct < 10

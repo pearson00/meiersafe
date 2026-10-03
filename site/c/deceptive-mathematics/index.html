@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Deceptive mathematics: why 99 percent, repeated, is not safe enough — meiersafe.com</title>
+<meta name="description" content="A go decision that succeeds 99 percent of the time, made 18 times, fails at least once one time in six. Factor I of Mike Meier's framework.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="page-article" data-section="framework">
+<div class="proto-banner">Prototype C · Narrative · draft for Mike's review · Mike's words from the paper, talks and articles, not yet edited · <a href="../../">compare all designs</a></div>
+
+<header class="site-header">
+  <a class="site-name" href="../">meiersafe<span>.com</span></a>
+  <nav class="site-nav" aria-label="Main">
+    <a href="../framework/" aria-current="page">Framework</a>
+    <a href="../case-studies/">Case studies</a>
+    <a href="../briefing/">Briefing</a>
+    <a href="../the-paper/">The paper</a>
+    <a href="../about/">About</a>
+  </nav>
+</header>
+
+<main class="article">
+  <nav class="position" aria-label="Framework position">
+    <a class="pos-prev" href="../framework/">← The framework</a>
+    <span class="pos-here">Factor I of III</span>
+    <a class="pos-next" href="../murphys-corollary/">Factor II · Murphy's Corollary →</a>
+  </nav>
+
+  <h1>Deceptive mathematics: <span class="subtitle">why 99 percent, repeated, is not safe enough</span></h1>
+
+  <div class="key-idea">
+    <p class="key-label">Key idea</p>
+    <p>Making go decisions at a 99 percent probability of success, we will probably see a long string of successes. And yet after only 18 such decisions, the chance that at least one has failed has risen to 17 percent, or one in six: the same odds as a game of Russian roulette.</p>
+  </div>
+
+  <p class="byline">By <span class="author">Mike Meier</span> · First published November 12, 2026 (planned) · Adapted from <em>Lessons Learned and Murphy's Corollary</em>, SETP, 2015</p>
+
+  <nav class="toc" aria-labelledby="toc-title">
+    <p id="toc-title" class="toc-title">On this page</p>
+    <ol>
+      <li><a href="#long-strings">High odds, long strings of success</a></li>
+      <li><a href="#the-arithmetic">The arithmetic</a></li>
+      <li><a href="#try-it">Try the numbers</a></li>
+      <li><a href="#table">The numbers in a table</a></li>
+      <li><a href="#data-set">The data set is too small</a></li>
+    </ol>
+  </nav>
+
+  <div class="body">
+    <h2 id="long-strings">High odds, long strings of success <a class="anchor" href="#long-strings" aria-label="Link to this section">#</a></h2>
+    <p>Let's imagine we're making go decisions when we have a 99 percent probability of success. Chances are, we'll see a long string of successful outcomes. Each one feels like confirmation.</p>
+    <p>And yet, after only 18 such decisions, our overall cumulative probability of success has fallen to 83 percent. In other words, our cumulative probability of failure has risen to <strong>17 percent, or one in six</strong>: the same level as in the game of Russian roulette.</p>
+    <blockquote class="pull">I don't know how many of you took me up on my offer of ten million dollars with one chance in six of a catastrophic outcome, but my guess is not many.</blockquote>
+
+    <h2 id="the-arithmetic">The arithmetic <a class="anchor" href="#the-arithmetic" aria-label="Link to this section">#</a></h2>
+    <p>Raise the probability of an outcome to the power of the number of trials to get the probability of that outcome for every event in the series. At 99 percent, eighteen times: 0.99<sup>18</sup> = 0.83. The chance that at least one fails is what's left: 1 − 0.83 = 0.17.</p>
+    <aside class="note" id="note-independent"><span class="note-num">*</span> This assumes each decision is independent and carries the same risk. In practice, as standards slip with each success (Factor II), the risk on later decisions tends to rise.</aside>
+    <p class="draft-flag">Draft: the side note is Steve's, for Mike to keep, change or cut.</p>
+
+    <h2 id="try-it">Try the numbers <a class="anchor" href="#try-it" aria-label="Link to this section">#</a></h2>
+    <div class="calculator">
+      <p class="calc-sentence">
+        A go decision that succeeds
+        <label><span class="visually-hidden">probability of success, percent</span><input id="calc-p" type="text" inputmode="decimal" autocomplete="off" value="99"></label>% of the time,
+        made <label><span class="visually-hidden">number of times</span><input id="calc-n" type="text" inputmode="numeric" autocomplete="off" value="18"></label> times,
+        fails at least once <output id="calc-out" for="calc-p calc-n">17%</output> of the time:
+        <span id="calc-odds">about one chance in 6</span>.
+      </p>
+      <p class="calc-note">Failure becomes more likely than not after <strong id="calc-half">69</strong> decisions at this level of confidence.</p>
+    </div>
+    <p>Try 99.9, then 99.99. Each extra nine buys about ten times as many decisions before the odds turn against you. It never buys an unlimited number.</p>
+
+    <h2 id="table">The numbers in a table <a class="anchor" href="#table" aria-label="Link to this section">#</a></h2>
+    <table class="data">
+      <caption>Chance that at least one go decision fails</caption>
+      <thead>
+        <tr><th scope="col">Decisions</th><th scope="col">at 99%</th><th scope="col">at 99.9%</th><th scope="col">at 99.99%</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">1</th><td>1.0%</td><td>0.10%</td><td>0.010%</td></tr>
+        <tr><th scope="row">10</th><td>9.6%</td><td>1.0%</td><td>0.10%</td></tr>
+        <tr class="hl"><th scope="row">18</th><td>17%</td><td>1.8%</td><td>0.18%</td></tr>
+        <tr><th scope="row">50</th><td>39%</td><td>4.9%</td><td>0.50%</td></tr>
+        <tr><th scope="row">100</th><td>63%</td><td>9.5%</td><td>1.0%</td></tr>
+        <tr><th scope="row">500</th><td>99%</td><td>39%</td><td>4.9%</td></tr>
+        <tr><th scope="row">1,000</th><td>&gt;99.9%</td><td>63%</td><td>9.5%</td></tr>
+      </tbody>
+    </table>
+    <p class="table-note">More likely than not to fail after 69 decisions at 99%, 693 at 99.9%, and 6,932 at 99.99%.</p>
+
+    <h2 id="data-set">The data set is too small <a class="anchor" href="#data-set" aria-label="Link to this section">#</a></h2>
+    <p>A long string of successes is exactly what a 99 percent decision produces, so the string tells us very little. Our data set is too small, at least at the beginning of any such process. A landing that fails one time in a thousand averages about a thousand successes before the first crash, and runs of 1,500 or more happen about one time in five. Fifteen hundred top landings without a crash could not show that the landing was safe.</p>
+    <p class="draft-flag">Draft: the last two sentences are Steve's worked example, for Mike to check.</p>
+    <p>Which raises a hard question, one Mike was asked at the SETP symposium: if we can't reliably tell 99.9 percent from 99.99 percent before the fact, don't we need 100 percent? <a href="../questions/#safety-100">Is 100% safety possible?</a></p>
+  </div>
+
+  <section class="related" aria-labelledby="related-title">
+    <h2 id="related-title">Related</h2>
+    <ul>
+      <li><a href="../murphys-corollary/">Factor II · Murphy's Corollary</a>: why each success feels like proof</li>
+      <li><a href="../case-studies/top-landing-1995/">Case study: the 1995 top landing</a>: some 1,500 successes, then a crash</li>
+      <li><a href="../analyzing-success/">The remedy</a>: a target that tells luck from margin</li>
+    </ul>
+  </section>
+
+  <nav class="next-up" aria-label="Next in the reading order">
+    <p class="next-label">Next in the reading order</p>
+    <a href="../murphys-corollary/">Factor II · Murphy's Corollary <span>Anything that did not go wrong could not have gone wrong.</span></a>
+  </nav>
+
+  <section class="cite" aria-labelledby="cite-title">
+    <h2 id="cite-title">Cite this page</h2>
+    <p class="cite-apa">Meier, M. (2026, November 12). <em>Deceptive mathematics: Why 99 percent, repeated, is not safe enough</em>. meiersafe.com. https://meiersafe.com/deceptive-mathematics/</p>
+  </section>
+
+  <p class="license-line"><em>Deceptive mathematics</em> by <a href="../about/">Mike Meier</a>, meiersafe.com/deceptive-mathematics/, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
+</main>
+
+<footer class="site-footer">
+  <p>Content by Mike Meier, licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; third-party material excluded. · <a href="../">Home</a> · <a href="../framework/">Framework</a> · <a href="../case-studies/">Case studies</a> · <a href="../questions/">Hard questions</a> · <a href="../briefing/">Briefing</a> · <a href="../the-paper/">The paper</a> · <a href="../about/">About</a></p>
+</footer>
+<script src="../calc.js"></script>
+</body>
+</html>

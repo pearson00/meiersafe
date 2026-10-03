@@ -2,9 +2,9 @@
 
 The website for Mike Meier's *Lessons Learned and Murphy's Corollary*.
 
-**Status: design prototypes.** Four directions (A Reference, B Briefing, C Narrative, D Briefing quieter) share the same pages and text; only the theme differs.
+**Status: design prototypes.** Four directions (A Reference, B Briefing, C Narrative, D Briefing quieter) share the same twelve pages and text; only the theme differs.
 
-- `src/` — the pages, written once, with a `{{LABEL}}` placeholder for the prototype name
+- `src/` — the pages, written once. Each page has `<!--#header-->` and `<!--#footer-->` lines, filled from `src/_partials/`; `{{ROOT}}` is the relative path to the site root, `{{LABEL}}` the prototype name, and the page's `data-section` marks the current nav item
 - `themes/` — one stylesheet per design
 - `chooser.html` — the landing page that links the four designs
 - `scripts/build.sh` — builds `site/` (chooser plus `a/` to `d/`)
