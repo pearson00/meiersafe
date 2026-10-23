@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 152" width="600" height="152" role="img" aria-labelledby="t d">
+  <title id="t">One box of the risk matrix over an increasing number of trials</title>
+  <desc id="d">The Major consequence / Improbable box of the risk matrix projected through an increasing number of trials, left to right: it starts green, shades to yellow, stays yellow, then shades through orange to red, showing how a risk that is acceptable once can become unacceptable with repetition. After Mike Meier's 2025 figure.</desc>
+  <defs>
+    <linearGradient id="hGY"><stop offset="0" stop-color="#2e9e44"/><stop offset=".5" stop-color="#9cc43a"/><stop offset="1" stop-color="#f5c01a"/></linearGradient>
+    <linearGradient id="hYR"><stop offset="0" stop-color="#f5c01a"/><stop offset=".5" stop-color="#ee6a1f"/><stop offset="1" stop-color="#d7261e"/></linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#55626f"/></marker>
+  </defs>
+  <rect width="600" height="152" fill="#ffffff"/>
+
+  <g font-family="'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="8" y="20" font-size="15" font-weight="500" fill="#14202b">Major consequence / Improbable, repeated</text>
+    <text x="300" y="144" text-anchor="middle" font-size="14" fill="#55626f">Increasing number of trials</text>
+  </g>
+
+  <g transform="translate(8 32)">
+    <rect x="0" y="0" width="114" height="72" rx="3" fill="url(#hGY)"/>
+    <rect x="117" y="0" width="114" height="72" rx="3" fill="#f5c01a"/>
+    <rect x="234" y="0" width="114" height="72" rx="3" fill="#f5c01a"/>
+    <rect x="351" y="0" width="114" height="72" rx="3" fill="url(#hYR)"/>
+    <rect x="468" y="0" width="116" height="72" rx="3" fill="#d7261e"/>
+  </g>
+  <line x1="8" y1="120" x2="590" y2="120" stroke="#55626f" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

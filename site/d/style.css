@@ -57,7 +57,6 @@ section h2 { font-size: 1.2rem; font-weight: 600; color: var(--navy); margin: 2.
 .calc-sentence { font-size: 1.2rem; line-height: 2; }
 .calc-sentence input { font: inherit; width: 9ch; border: 2px solid var(--navy); border-radius: 3px; text-align: center; background: #fff; color: var(--navy); -moz-appearance: textfield; }
 .calc-sentence input::-webkit-inner-spin-button { -webkit-appearance: none; }
-#calc-n { width: 4.5ch; }
 .calc-sentence output { font-weight: 600; background: var(--navy); color: #fff; padding: .05rem .4rem; border-radius: 3px; }
 .calc-note { font-size: .92rem; color: var(--muted); }
 
@@ -190,3 +189,12 @@ a.pos-prev, a.pos-next { text-decoration: none; }
   .next-up { display: none; }
   .placeholder, table.data, .case-cards li { break-inside: avoid; }
 }
+
+/* Oct 23: quoted headline, grouped reading list, figures, author's note */
+.hero h1 { text-wrap: balance; }
+.hero h1 .phrase { display: inline-block; }
+.hero h1 .hang { margin-left: -.42em; }
+.path-group { margin: 1.1rem 0 .25rem; font-family: var(--sans); font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.path-groups .path { margin-top: 0; }
+.diagram img { display: block; width: 100%; height: auto; }
+.author-note { font-family: var(--sans); font-size: .88rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: .75rem; margin-top: 2rem; }

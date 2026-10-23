@@ -60,7 +60,6 @@ section h2 { font: 700 clamp(1.6rem, 3.5vw, 2.1rem)/1.15 var(--display); margin:
 .calc-sentence { font: 400 1.45rem/1.9 var(--display); }
 .calc-sentence input { font: inherit; width: 8.5ch; background: transparent; color: var(--sun); border: 0; border-bottom: 2px dashed var(--sun); text-align: center; -moz-appearance: textfield; }
 .calc-sentence input::-webkit-inner-spin-button { -webkit-appearance: none; }
-#calc-n { width: 4.5ch; }
 .calc-sentence output { color: var(--sun); font-weight: 700; }
 .calc-note { color: #b9c8d6; font-size: .92rem; }
 
@@ -176,3 +175,12 @@ a.pos-prev, a.pos-next { text-decoration: none; }
   .next-up { display: none; }
   .placeholder, table.data, .case-cards li { break-inside: avoid; }
 }
+
+/* Oct 23: quoted headline, grouped reading list, figures, author's note */
+.hero h1 { text-wrap: balance; }
+.hero h1 .phrase { display: inline-block; }
+.hero h1 .hang { margin-left: -.42em; }
+.path-group { margin: 1.1rem 0 .25rem; font-family: var(--sans); font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.path-groups .path { margin-top: 0; }
+.diagram img { display: block; width: 100%; height: auto; }
+.author-note { font-family: var(--sans); font-size: .88rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: .75rem; margin-top: 2rem; }

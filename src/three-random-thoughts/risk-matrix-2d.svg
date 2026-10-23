@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 446" width="720" height="446" role="img" aria-labelledby="t d">
+  <title id="t">2D Risk Matrix</title>
+  <desc id="d">Severity of consequence down the side (Catastrophic, Hazardous, Major, Minor, No Effect) against likelihood of occurrence across the top (Frequent, Probable, Occasional, Remote, Improbable). Colours run from black and red for the worst combinations through orange and yellow to green; some cells are shaded transitions rather than solid blocks, to show the uncertainty in assigning probabilities and consequences. After Mike Meier's 2025 figure.</desc>
+  <defs>
+    <linearGradient id="hBR"><stop offset="0" stop-color="#1f1f1f"/><stop offset=".5" stop-color="#8a1610"/><stop offset="1" stop-color="#d7261e"/></linearGradient>
+    <linearGradient id="hRY"><stop offset="0" stop-color="#d7261e"/><stop offset=".5" stop-color="#ee6a1f"/><stop offset="1" stop-color="#f5c01a"/></linearGradient>
+    <linearGradient id="hYG"><stop offset="0" stop-color="#f5c01a"/><stop offset=".5" stop-color="#9cc43a"/><stop offset="1" stop-color="#2e9e44"/></linearGradient>
+    <linearGradient id="vBR" x2="0" y2="1"><stop offset="0" stop-color="#1f1f1f"/><stop offset=".5" stop-color="#8a1610"/><stop offset="1" stop-color="#d7261e"/></linearGradient>
+    <linearGradient id="vRY" x2="0" y2="1"><stop offset="0" stop-color="#d7261e"/><stop offset=".5" stop-color="#ee6a1f"/><stop offset="1" stop-color="#f5c01a"/></linearGradient>
+    <linearGradient id="vYG" x2="0" y2="1"><stop offset="0" stop-color="#f5c01a"/><stop offset=".5" stop-color="#9cc43a"/><stop offset="1" stop-color="#2e9e44"/></linearGradient>
+  </defs>
+  <rect width="720" height="446" fill="#ffffff"/>
+
+  <g font-family="'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="430" y="20" text-anchor="middle" font-size="14" fill="#55626f">Likelihood of occurrence</text>
+    <text transform="translate(22 244) rotate(-90)" text-anchor="middle" font-size="14" fill="#55626f">Severity of consequence</text>
+    <g font-size="15" font-weight="500" fill="#14202b">
+      <g text-anchor="middle">
+        <text x="214" y="50">Frequent</text>
+        <text x="322" y="50">Probable</text>
+        <text x="430" y="50">Occasional</text>
+        <text x="538" y="50">Remote</text>
+        <text x="646" y="50">Improbable</text>
+      </g>
+      <g text-anchor="end">
+        <text x="150" y="104">Catastrophic</text>
+        <text x="150" y="176">Hazardous</text>
+        <text x="150" y="248">Major</text>
+        <text x="150" y="320">Minor</text>
+        <text x="150" y="392">No Effect</text>
+      </g>
+    </g>
+  </g>
+
+  <g transform="translate(160 64)">
+    <!-- Catastrophic -->
+    <rect x="0" y="0" width="105" height="69" rx="3" fill="#1f1f1f"/>
+    <rect x="108" y="0" width="105" height="69" rx="3" fill="url(#hBR)"/>
+    <rect x="216" y="0" width="105" height="69" rx="3" fill="url(#hRY)"/>
+    <rect x="324" y="0" width="105" height="69" rx="3" fill="#f5c01a"/>
+    <rect x="432" y="0" width="105" height="69" rx="3" fill="url(#hYG)"/>
+    <!-- Hazardous -->
+    <rect x="0" y="72" width="105" height="69" rx="3" fill="#1f1f1f"/>
+    <rect x="108" y="72" width="105" height="69" rx="3" fill="url(#hBR)"/>
+    <rect x="216" y="72" width="105" height="69" rx="3" fill="url(#hRY)"/>
+    <rect x="324" y="72" width="105" height="69" rx="3" fill="#f5c01a"/>
+    <rect x="432" y="72" width="105" height="69" rx="3" fill="url(#hYG)"/>
+    <!-- Major -->
+    <rect x="0" y="144" width="105" height="69" rx="3" fill="url(#vBR)"/>
+    <rect x="108" y="144" width="105" height="69" rx="3" fill="#d7261e"/>
+    <rect x="216" y="144" width="105" height="69" rx="3" fill="url(#hRY)"/>
+    <rect x="324" y="144" width="105" height="69" rx="3" fill="#f5c01a"/>
+    <rect x="432" y="144" width="105" height="69" rx="3" fill="url(#hYG)"/>
+    <!-- Minor -->
+    <rect x="0" y="216" width="105" height="69" rx="3" fill="url(#vRY)"/>
+    <rect x="108" y="216" width="105" height="69" rx="3" fill="url(#vRY)"/>
+    <rect x="216" y="216" width="105" height="69" rx="3" fill="#f5c01a"/>
+    <rect x="324" y="216" width="105" height="69" rx="3" fill="url(#vYG)"/>
+    <rect x="432" y="216" width="105" height="69" rx="3" fill="#2e9e44"/>
+    <!-- No Effect -->
+    <rect x="0" y="288" width="105" height="69" rx="3" fill="url(#vYG)"/>
+    <rect x="108" y="288" width="105" height="69" rx="3" fill="url(#vYG)"/>
+    <rect x="216" y="288" width="105" height="69" rx="3" fill="url(#vYG)"/>
+    <rect x="324" y="288" width="105" height="69" rx="3" fill="#2e9e44"/>
+    <rect x="432" y="288" width="105" height="69" rx="3" fill="#2e9e44"/>
+  </g>
+</svg>

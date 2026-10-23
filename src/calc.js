@@ -7,9 +7,20 @@
   var half = document.getElementById("calc-half"); // optional: decisions until failure passes 50%
   if (!p || !n || !out || !odds) return;
 
+  // Whole text must be a number: "1,500" reads as 1500, but "1,5", "1.5 times" or "12abc" are
+  // refused rather than cut short (parseInt would read "1,500" as 1).
+  function percent(s) {
+    s = s.trim();
+    return /^(\d+\.?\d*|\.\d+)$/.test(s) ? Number(s) : NaN;
+  }
+  function count(s) {
+    s = s.trim();
+    return /^(\d+|\d{1,3}(,\d{3})+)$/.test(s) ? Number(s.replace(/,/g, "")) : NaN;
+  }
+
   function update() {
-    var pv = parseFloat(p.value);
-    var ns = parseInt(n.value, 10);
+    var pv = percent(p.value);
+    var ns = count(n.value);
     if (!(pv > 0 && pv < 100) || !(ns >= 1)) {
       out.textContent = "–";
       odds.textContent = "enter a percentage below 100 and a whole number of times";
