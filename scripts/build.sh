@@ -31,6 +31,8 @@ for t in a b c d; do
       if [ "$i" -eq 0 ]; then root="../"; else root="../$root"; fi
       i=$((i + 1))
     done
+    # 404.html is served at whatever unknown address was asked for, so its links must be absolute.
+    if [ "$rel" = "404.html" ]; then root="/$t/"; fi
     section=$(sed -n 's/.*<body[^>]*data-section="\([a-z-]*\)".*/\1/p' "$f")
     sed -i '' \
       -e '/<!--#header-->/{' -e 'r src/_partials/header.html' -e 'd' -e '}' \

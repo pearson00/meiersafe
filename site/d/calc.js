@@ -32,9 +32,12 @@
     if (half) half.textContent = Math.ceil(Math.log(0.5) / Math.log1p(-q)).toLocaleString("en-US");
     var fail = -Math.expm1(ns * Math.log1p(-q));
     var pct = fail * 100;
-    out.textContent = (pct < 10
-      ? pct.toLocaleString("en-US", { maximumSignificantDigits: 2 })
-      : Math.round(pct)) + "%";
+    // Rounding would show a near-certain failure as "100%", which reads as certain.
+    out.textContent = pct >= 99.95
+      ? ">99.9%"
+      : (pct < 10
+        ? pct.toLocaleString("en-US", { maximumSignificantDigits: 2 })
+        : Math.round(pct)) + "%";
     var oneIn = 1 / fail;
     odds.textContent = oneIn < 1.05
       ? "close to certain"
