@@ -274,3 +274,8 @@ svg .leader { stroke: var(--navy); stroke-width: 1; }
 @media print { .fw-list li { break-inside: avoid; } }
 svg .wind line { stroke: var(--navy); stroke-width: 2; }
 svg .wind polygon { fill: var(--navy); }
+
+/* Embedded video (Vimeo); the Anaheim recording is 4:3 */
+.video-figure { margin: 1.25rem 0; }
+.video { aspect-ratio: 4 / 3; background: var(--ink); }
+.video iframe { display: block; width: 100%; height: 100%; border: 0; }
