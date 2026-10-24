@@ -208,3 +208,7 @@ a.pos-prev, a.pos-next { text-decoration: none; }
 /* Oct 24: the paper's indented italic asides (material beyond the talk) */
 .amp-label { font: 600 .74rem/1.3 var(--sans); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); margin: 1rem 0 .35rem; }
 .body > .amp { border-left: 3px solid var(--rule); padding-left: .9rem; }
+
+/* Oct 24: Anaheim Q&A transcript */
+.qa p { margin: 0 0 .9rem; }
+.qa strong { font-family: var(--sans); font-size: .9rem; color: var(--navy); }
