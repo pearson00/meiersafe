@@ -24,15 +24,12 @@
     return /^(\d+|\d{1,3}(,\d{3})+)$/.test(s) ? Number(s.replace(/,/g, "")) : NaN;
   }
 
-  var squares = [];
-  if (grid) {
-    for (var i = 0; i < 100; i++) {
-      var sq = document.createElement("span");
-      sq.className = "sq";
-      grid.appendChild(sq);
-      squares.push(sq);
-    }
-  }
+  // The page carries the 100 squares (shaded for 99%, 18 times) so the picture works without
+  // JavaScript; the buttons stay hidden until this script can make them work.
+  var squares = grid ? Array.prototype.slice.call(grid.querySelectorAll(".sq")) : [];
+  if (grid && squares.length !== 100) throw new Error("calc: expected 100 squares in #calc-grid, found " + squares.length);
+  if (run) run.hidden = false;
+  document.querySelectorAll(".calc-presets").forEach(function (g) { g.hidden = false; });
 
   function shade(failed, label) {
     if (!grid) return;
