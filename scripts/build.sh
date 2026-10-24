@@ -49,9 +49,9 @@ for t in a b c d; do
   done
 done
 
-if grep -rlE '\{\{|<!--#' site >/dev/null; then
+if grep -rlIE '\{\{|<!--#' site >/dev/null; then
   echo "build: unreplaced placeholder in site/:" >&2
-  grep -rnE '\{\{|<!--#' site >&2
+  grep -rnIE '\{\{|<!--#' site >&2
   exit 1
 fi
 echo "built site/ (chooser + a, b, c, d)"
