@@ -212,3 +212,20 @@ a.pos-prev, a.pos-next { text-decoration: none; }
 /* Oct 24: Anaheim Q&A transcript */
 .qa p { margin: 0 0 .9rem; }
 .qa strong { font-family: var(--sans); font-size: .9rem; color: var(--navy); }
+
+/* Oct 24: one-page handout */
+.handout-credit { font-family: var(--sans); font-size: .85rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: .6rem; margin-top: 1.5rem; }
+@media print {
+  .page-handout body, .page-handout { font-size: 9.5pt; line-height: 1.32; }
+  .page-handout ol.premises { margin: .2rem 0; }
+  .page-handout .questions li { line-height: 1.25; }
+  .page-handout .site-footer, .page-handout .draft-flag { display: none; }
+  .page-handout h1 { font-size: 15pt; margin: 0 0 .3rem; }
+  .page-handout h2 { font-size: 11pt; margin: .6rem 0 .2rem; border: 0; padding: 0; }
+  .page-handout .body p, .page-handout li { margin: 0 0 .2rem; }
+  .page-handout table.data { font-size: 8.5pt; margin: .2rem 0; }
+  .page-handout table.data th, .page-handout table.data td { padding: .08rem .4rem; }
+  .page-handout .questions li { padding-top: .1rem; padding-bottom: .1rem; }
+  .page-handout .site-header { margin-bottom: .3rem; }
+}
+@page { margin: .6in; }
