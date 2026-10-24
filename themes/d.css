@@ -272,3 +272,5 @@ svg .leader { stroke: var(--navy); stroke-width: 1; }
 .placeholder { margin-inline: 0; }
 @media (min-width: 78rem) { .site-header, .site-footer { padding-left: max(1rem, calc((100% - 80rem) / 2)); padding-right: max(1rem, calc((100% - 80rem) / 2)); } }
 @media print { .fw-list li { break-inside: avoid; } }
+svg .wind line { stroke: var(--navy); stroke-width: 2; }
+svg .wind polygon { fill: var(--navy); }
