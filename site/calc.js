@@ -71,10 +71,14 @@
       : (pct < 10
         ? pct.toLocaleString("en-US", { maximumSignificantDigits: 2 })
         : Math.round(pct)) + "%";
+    // "One chance in N" only reads sensibly while failure is the less likely outcome; above
+    // half, say it in tenths ("one chance in 1" was what 78% used to show).
     var oneIn = 1 / fail;
-    odds.textContent = oneIn < 1.05
+    odds.textContent = fail >= 0.95
       ? "close to certain"
-      : "about one chance in " + (oneIn < 10 ? Math.round(oneIn) : Math.round(oneIn).toLocaleString("en-US"));
+      : fail >= 0.5
+        ? "about " + Math.round(fail * 10) + " chances in 10"
+        : "about one chance in " + (oneIn < 10 ? Math.round(oneIn) : Math.round(oneIn).toLocaleString("en-US"));
 
     current = { fail: fail };
     if (run) run.disabled = false;
