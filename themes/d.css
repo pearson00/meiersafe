@@ -229,3 +229,22 @@ a.pos-prev, a.pos-next { text-decoration: none; }
   .page-handout .site-header { margin-bottom: .3rem; }
 }
 @page { margin: .6in; }
+
+/* Oct 24: calculator examples, 100-crew grid, simulation, cylinder */
+.calc-presets { display: flex; flex-wrap: wrap; gap: .5rem; margin: .75rem 0; }
+.calc-presets button, #calc-run { font: 500 .85rem var(--sans); color: var(--navy); background: #fff; border: 1.5px solid var(--navy); border-radius: 3px; padding: .3rem .6rem; cursor: pointer; }
+.calc-presets button:hover, #calc-run:hover { background: var(--navy); color: #fff; }
+#calc-run:disabled { opacity: .5; cursor: default; }
+.calc-visual { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start; margin-top: 1rem; }
+.calc-grid-title { font: 600 .85rem var(--sans); margin: 0 0 .4rem; }
+.calc-grid { display: grid; grid-template-columns: repeat(10, 1.1rem); gap: 3px; }
+.calc-grid .sq { width: 1.1rem; height: 1.1rem; border: 1.5px solid var(--navy); border-radius: 2px; background: #fff; }
+.calc-grid .sq.fail { background: var(--navy); }
+.calc-cylinder { margin: 0; width: 9rem; }
+.calc-cylinder svg { width: 100%; height: auto; }
+.calc-cylinder .cyl { fill: #c9d4de; }
+.calc-cylinder .chamber { fill: #fff; stroke: var(--navy); stroke-width: 2; }
+.calc-cylinder .chamber.loaded { fill: var(--navy); }
+.calc-cylinder .cyl-axis { fill: var(--navy); }
+.calc-cylinder figcaption { font-size: .8rem; }
+@media print { .calc-presets, #calc-run { display: none; } }

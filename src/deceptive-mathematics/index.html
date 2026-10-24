@@ -66,7 +66,35 @@
         <span id="calc-odds" aria-live="polite">about one chance in 6</span>.
       </p>
       <p class="calc-note">Failure becomes more likely than not after <strong id="calc-half">69</strong> decisions at this level of confidence.</p>
+      <div class="calc-presets" role="group" aria-label="Examples">
+        <button type="button" data-calc-p="99" data-calc-n="18">The paper's example: 99%, 18 times</button>
+        <button type="button" data-calc-p="99.9" data-calc-n="1,500">1,500 top landings at 99.9%</button>
+        <button type="button" data-calc-p="99.99999" data-calc-n="1,000">The Rhino Jump in fleet use: seven nines, 1,000 times</button>
+      </div>
+      <div class="calc-visual">
+        <div>
+          <p class="calc-grid-title">100 crews, each making the same series of decisions</p>
+          <div id="calc-grid" class="calc-grid" role="img" aria-label="On average: 17 of 100 crews had at least one failure"></div>
+          <p id="calc-grid-note" class="calc-note" aria-live="polite">On average: 17 of 100 crews had at least one failure.</p>
+          <button type="button" id="calc-run">Run it once for 100 crews</button>
+        </div>
+        <figure class="calc-cylinder">
+          <svg viewBox="0 0 120 120" role="img" aria-labelledby="cyl-title">
+            <title id="cyl-title">A six-chamber revolver cylinder with one chamber loaded: one chance in six.</title>
+            <circle cx="60" cy="60" r="56" class="cyl"/>
+            <circle cx="60" cy="24" r="13" class="chamber loaded"/>
+            <circle cx="91" cy="42" r="13" class="chamber"/>
+            <circle cx="91" cy="78" r="13" class="chamber"/>
+            <circle cx="60" cy="96" r="13" class="chamber"/>
+            <circle cx="29" cy="78" r="13" class="chamber"/>
+            <circle cx="29" cy="42" r="13" class="chamber"/>
+            <circle cx="60" cy="60" r="7" class="cyl-axis"/>
+          </svg>
+          <figcaption>99 percent, 18 times: the same odds as one round in a six-chamber cylinder.</figcaption>
+        </figure>
+      </div>
     </div>
+    <p class="draft-flag">Draft: the examples and the crews picture are Steve's, for Mike to keep, change or cut. The 99.9 percent for top landings is illustrative, not Mike's figure.</p>
     <p>Try 99.9, then 99.99. Each extra nine buys about ten times as many decisions before the odds turn against you. It never buys an unlimited number.</p>
 
     <h2 id="table">The numbers in a table <a class="anchor" href="#table" aria-label="Link to this section">#</a></h2>
