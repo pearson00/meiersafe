@@ -2,10 +2,13 @@
 # Build the site into site/ from src/ with design D (themes/d.css), the reference design.
 # Each page carries <!--#header--> and <!--#footer--> lines, replaced by src/_partials/;
 # {{ROOT}} becomes the relative path to the site root, and the nav item named by
-# the page's data-section gets aria-current.
+# the page's data-section gets aria-current ("page" on the section's own page, "true" below it).
+# Every page except 404 gets a canonical link to its meiersafe.com address.
+# DRAFT=1 (the default until launch) adds noindex to every page; build with DRAFT=0 to launch.
 # Designs A-C are retired to archive/ (tag prototypes-abcd builds all four).
 set -eu
 cd "$(dirname "$0")/.."
+DRAFT=${DRAFT:-1}
 
 rm -rf site
 mkdir -p site
@@ -14,11 +17,33 @@ rm -rf site/_partials
 cp themes/d.css site/style.css
 
 # The prototypes lived under /a/ to /d/; send old links to the same page at the root.
+# The WordPress site (until November 2026) used the addresses below; each goes to its nearest page.
 cat > site/_redirects <<'EOF'
 /a/* /:splat 301
 /b/* /:splat 301
 /c/* /:splat 301
 /d/* /:splat 301
+/about-mike-meier/awards-and-elections/ /about/ 301
+/about-mike-meier/* /about/ 301
+/about-mike-meier /about/ 301
+/mike-meier/ /about/ 301
+/introduction/ / 301
+/safety-and-risk-mitigation/ /framework/ 301
+/contact-and-booking/ /about/#contact 301
+/video/ /speaking/#video 301
+/home/news/ /speaking/ 301
+/speaking/testimonials/ /speaking/ 301
+/testimonials/* /speaking/ 301
+/2015/03/28/jack-northrop-award/ /about/ 301
+/2015/05/17/rogallo-foundation-hall-of-fame-induction/ /about/ 301
+/2016/03/11/rob-kells-memorial-award-from-ushpa/ /about/ 301
+/2016/05/13/128/ /speaking/ 301
+/2016/07/18/mike-meier-at-scaled-composites/ /speaking/ 301
+/2016/07/28/eaa-airventure-2016/ /speaking/ 301
+/2018/01/26/gulfstream-aerospace/ /speaking/ 301
+/author/* /about/ 301
+/category/* / 301
+/feed/* / 301
 EOF
 
 find site -name '*.html' | while read -r f; do
@@ -38,12 +63,22 @@ find site -name '*.html' | while read -r f; do
     -e '/<!--#footer-->/{' -e 'r src/_partials/footer.html' -e 'd' -e '}' \
     "$f"
   if [ -n "$section" ]; then
-    sed -i '' "s/{{CUR_$section}}/ aria-current=\"page\"/" "$f"
+    if [ "$rel" = "$section/index.html" ]; then current="page"; else current="true"; fi
+    sed -i '' "s/{{CUR_$section}}/ aria-current=\"$current\"/" "$f"
   fi
   sed -i '' \
     -e 's/{{CUR_[a-z-]*}}//g' \
     -e "s#{{ROOT}}#$root#g" \
     "$f"
+  if [ "$rel" != "404.html" ]; then
+    path=${rel%index.html}
+    sed -i '' "s#<link rel=\"stylesheet\"#<link rel=\"canonical\" href=\"https://meiersafe.com/$path\">\\
+<link rel=\"stylesheet\"#" "$f"
+  fi
+  if [ "$DRAFT" = "1" ]; then
+    sed -i '' 's#<meta name="viewport" content="width=device-width, initial-scale=1">#&\
+<meta name="robots" content="noindex, nofollow">#' "$f"
+  fi
 done
 
 if grep -rlIE '\{\{|<!--#' site >/dev/null; then
@@ -51,4 +86,5 @@ if grep -rlIE '\{\{|<!--#' site >/dev/null; then
   grep -rnIE '\{\{|<!--#' site >&2
   exit 1
 fi
-echo "built site/ (design D at the root)"
+if [ "$DRAFT" = "1" ]; then mode="draft: noindex on every page"; else mode="launch: indexable"; fi
+echo "built site/ (design D at the root; $mode)"

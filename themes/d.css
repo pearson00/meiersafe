@@ -262,3 +262,4 @@ a.pos-prev, a.pos-next { text-decoration: none; }
   table.data tr { break-inside: avoid; }
   .site-footer, .cite details, .placeholder { display: none; }
 }
+svg .leader { stroke: var(--navy); stroke-width: 1; }
