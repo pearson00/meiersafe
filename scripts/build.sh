@@ -1,52 +1,49 @@
 #!/bin/sh
-# Build the four prototypes into site/: same pages from src/, a different theme each.
+# Build the site into site/ from src/ with design D (themes/d.css), the reference design.
 # Each page carries <!--#header--> and <!--#footer--> lines, replaced by src/_partials/;
-# {{ROOT}} becomes the relative path to the prototype's root, and the nav item named by
+# {{ROOT}} becomes the relative path to the site root, and the nav item named by
 # the page's data-section gets aria-current.
+# Designs A-C are retired to archive/ (tag prototypes-abcd builds all four).
 set -eu
 cd "$(dirname "$0")/.."
 
 rm -rf site
 mkdir -p site
-cp chooser.html site/index.html
+cp -R src/. site/
+rm -rf site/_partials
+cp themes/d.css site/style.css
 
-for t in a b c d; do
-  case $t in
-    a) label="A · Reference" ;;
-    b) label="B · Briefing" ;;
-    c) label="C · Narrative" ;;
-    d) label="D · Briefing, quieter" ;;
-  esac
-  mkdir -p "site/$t"
-  cp -R src/. "site/$t/"
-  rm -rf "site/$t/_partials"
-  cp "themes/$t.css" "site/$t/style.css"
+# The prototypes lived under /a/ to /d/; send old links to the same page at the root.
+cat > site/_redirects <<'EOF'
+/a/* /:splat 301
+/b/* /:splat 301
+/c/* /:splat 301
+/d/* /:splat 301
+EOF
 
-  find "site/$t" -name '*.html' | while read -r f; do
-    rel=${f#site/$t/}
-    slashes=$(printf '%s' "$rel" | tr -cd '/' | wc -c | tr -d ' ')
-    root="./"
-    i=0
-    while [ "$i" -lt "$slashes" ]; do
-      if [ "$i" -eq 0 ]; then root="../"; else root="../$root"; fi
-      i=$((i + 1))
-    done
-    # 404.html is served at whatever unknown address was asked for, so its links must be absolute.
-    if [ "$rel" = "404.html" ]; then root="/$t/"; fi
-    section=$(sed -n 's/.*<body[^>]*data-section="\([a-z-]*\)".*/\1/p' "$f")
-    sed -i '' \
-      -e '/<!--#header-->/{' -e 'r src/_partials/header.html' -e 'd' -e '}' \
-      -e '/<!--#footer-->/{' -e 'r src/_partials/footer.html' -e 'd' -e '}' \
-      "$f"
-    if [ -n "$section" ]; then
-      sed -i '' "s/{{CUR_$section}}/ aria-current=\"page\"/" "$f"
-    fi
-    sed -i '' \
-      -e 's/{{CUR_[a-z-]*}}//g' \
-      -e "s#{{ROOT}}#$root#g" \
-      -e "s/{{LABEL}}/$label/g" \
-      "$f"
+find site -name '*.html' | while read -r f; do
+  rel=${f#site/}
+  slashes=$(printf '%s' "$rel" | tr -cd '/' | wc -c | tr -d ' ')
+  root="./"
+  i=0
+  while [ "$i" -lt "$slashes" ]; do
+    if [ "$i" -eq 0 ]; then root="../"; else root="../$root"; fi
+    i=$((i + 1))
   done
+  # 404.html is served at whatever unknown address was asked for, so its links must be absolute.
+  if [ "$rel" = "404.html" ]; then root="/"; fi
+  section=$(sed -n 's/.*<body[^>]*data-section="\([a-z-]*\)".*/\1/p' "$f")
+  sed -i '' \
+    -e '/<!--#header-->/{' -e 'r src/_partials/header.html' -e 'd' -e '}' \
+    -e '/<!--#footer-->/{' -e 'r src/_partials/footer.html' -e 'd' -e '}' \
+    "$f"
+  if [ -n "$section" ]; then
+    sed -i '' "s/{{CUR_$section}}/ aria-current=\"page\"/" "$f"
+  fi
+  sed -i '' \
+    -e 's/{{CUR_[a-z-]*}}//g' \
+    -e "s#{{ROOT}}#$root#g" \
+    "$f"
 done
 
 if grep -rlIE '\{\{|<!--#' site >/dev/null; then
@@ -54,4 +51,4 @@ if grep -rlIE '\{\{|<!--#' site >/dev/null; then
   grep -rnIE '\{\{|<!--#' site >&2
   exit 1
 fi
-echo "built site/ (chooser + a, b, c, d)"
+echo "built site/ (design D at the root)"
