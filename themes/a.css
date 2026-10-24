@@ -178,3 +178,8 @@ a.pos-prev, a.pos-next { text-decoration: none; }
 .diagram img { display: block; width: 100%; height: auto; }
 .author-note { font-family: var(--sans); font-size: .88rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: .75rem; margin-top: 2rem; }
 .diagram-tall img { max-width: 20rem; margin: 0 auto; }
+
+/* Oct 24: photo grid (About, test flying) */
+.photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; margin: 1rem 0 1.5rem; }
+.photo-grid figure { margin: 0; }
+.photo-grid img { display: block; width: 100%; height: auto; border-radius: 3px; }
