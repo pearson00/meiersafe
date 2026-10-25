@@ -11,8 +11,8 @@
 /contact-and-booking/ /about/#contact 301
 /video/ /speaking/#video 301
 /home/news/ /speaking/ 301
-/speaking/testimonials/ /speaking/ 301
-/testimonials/* /speaking/ 301
+/speaking/testimonials/ /speaking/#testimonials 301
+/testimonials/* /speaking/#testimonials 301
 /2015/03/28/jack-northrop-award/ /about/ 301
 /2015/05/17/rogallo-foundation-hall-of-fame-induction/ /about/ 301
 /2016/03/11/rob-kells-memorial-award-from-ushpa/ /about/ 301

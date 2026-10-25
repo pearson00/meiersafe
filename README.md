@@ -17,3 +17,5 @@ Rebuild after editing `src/` or `themes/`:
 ```
 
 Content is © Mike Meier and licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); third-party material is excluded.
+
+Each article page carries an edition in its byline and citation (Edition 1.0, November 12, 2026). When a page changes after launch, add a dated revision line to its byline (for example "Revised March 3, 2027").
