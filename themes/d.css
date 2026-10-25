@@ -251,7 +251,7 @@ a.pos-prev, a.pos-next { text-decoration: none; }
 @media print { .calc-presets, #calc-run { display: none; } }
 
 /* Oct 24 review fixes: long URLs in notes, phone tables and diagram labels, print breaks */
-.note { overflow-wrap: anywhere; }
+.note, .paper-notes li { overflow-wrap: anywhere; }
 @media (max-width: 30rem) {
   table.data th, table.data td { padding-left: .35rem; padding-right: .35rem; }
   table.data { font-size: .85rem; }
