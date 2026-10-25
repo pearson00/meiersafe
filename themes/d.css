@@ -278,4 +278,5 @@ svg .wind polygon { fill: var(--navy); }
 /* Embedded video (Vimeo); the Anaheim recording is 4:3 */
 .video-figure { margin: 1.25rem 0; }
 .video { aspect-ratio: 4 / 3; background: var(--ink); }
+.video-wide { aspect-ratio: 16 / 9; } /* the induction video is 960x540 */
 .video iframe { display: block; width: 100%; height: 100%; border: 0; }
