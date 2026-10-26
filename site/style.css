@@ -284,3 +284,8 @@ svg .wind polygon { fill: var(--navy); }
 .pull cite::before { content: "— "; }
 /* Oct 25: a month and year stay on one line in date columns */
 table.dated td:first-child { white-space: nowrap; }
+/* Oct 25: a tall photo beside the text it belongs to; full width on phones */
+.photo-side { margin: 0 0 1rem; }
+.photo-side img { display: block; width: 100%; max-width: 20rem; height: auto; border-radius: 3px; }
+@media (min-width: 40rem) { .photo-side { float: right; width: 14rem; margin: .3rem 0 1rem 1.5rem; } }
+#versions { clear: both; }

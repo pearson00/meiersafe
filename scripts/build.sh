@@ -81,6 +81,19 @@ find site -name '*.html' | while read -r f; do
   fi
 done
 
+# Link previews, author data and the site map (Mike's yes to S1-S4, October 25, 2026).
+python3 scripts/head_meta.py site
+
+# Search yes, AI answers yes, AI training no (Mike's answer to S5, October 25, 2026).
+cat > site/robots.txt <<'EOF'
+# meiersafe.com: search yes, AI answers yes, AI training no (contentsignals.org)
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+Sitemap: https://meiersafe.com/sitemap.xml
+EOF
+
 if grep -rlIE '\{\{|<!--#' site >/dev/null; then
   echo "build: unreplaced placeholder in site/:" >&2
   grep -rnIE '\{\{|<!--#' site >&2

@@ -1,0 +1,6 @@
+# meiersafe.com: search yes, AI answers yes, AI training no (contentsignals.org)
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+Sitemap: https://meiersafe.com/sitemap.xml
