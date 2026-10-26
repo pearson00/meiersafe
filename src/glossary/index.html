@@ -16,76 +16,86 @@
 <body class="page-article" data-section="framework">
 <!--#header-->
 
-<main class="article">
+<main id="main" class="article">
   <nav class="position" aria-label="Section">
     <span class="pos-here">Glossary</span>
   </nav>
 
-  <h1>Glossary: <span class="subtitle">the framework's own terms</span></h1>
+  <h1>Glossary: <span class="subtitle">the framework’s own terms</span></h1>
 
   <div class="key-idea">
     <p class="key-label">In brief</p>
-    <p>The first list defines the site's own terms in a sentence or two, in the wording of the page that explains each, with a link to it. A second list explains, in plain words, hang-gliding terms for test pilots and aerospace terms for hang-glider pilots.</p>
+    <p>The first list defines the site’s own terms in a sentence or two, in the wording of the page that explains each, with a link to it. A second list explains, in plain words, hang-gliding terms for test pilots and aerospace terms for hang-glider pilots.</p>
   </div>
 
-  <p class="byline">By <span class="author">Mike Meier</span> · Edition 1.0, November 12, 2026 (planned) · Drawn from the pages of this site</p>
+  <p class="byline">By <a class="author" href="{{ROOT}}about/">Mike Meier</a> · Edition 1.0, November 12, 2026 (planned) · Drawn from the pages of this site</p>
 
   <nav class="toc" aria-labelledby="toc-title">
     <p id="toc-title" class="toc-title">On this page</p>
     <ol>
+      <li><a href="#framework-terms">The framework’s terms</a>
+        <ul>
       <li><a href="#risk-matrix">2D risk matrix</a></li>
       <li><a href="#analysis-of-successes">Analysis of successes</a></li>
       <li><a href="#deceptive-mathematics">Deceptive mathematics</a></li>
       <li><a href="#go-decision">Go decision</a></li>
       <li><a href="#metric-and-target">Metric and target</a></li>
-      <li><a href="#murphys-corollary">Murphy's Corollary</a></li>
+      <li><a href="#murphys-corollary">Murphy’s Corollary</a></li>
       <li><a href="#owning-the-risk">Owning the risk</a></li>
       <li><a href="#pressure-to-go">Pressure to go</a></li>
       <li><a href="#smearing">Smearing</a></li>
       <li><a href="#vertically-unconstrained">Vertically unconstrained</a></li>
+        </ul></li>
       <li><a href="#other-terms">Other terms used on this site</a></li>
     </ol>
   </nav>
 
   <div class="body">
+    <h2 id="framework-terms">The framework’s terms&nbsp;<a class="anchor" href="#framework-terms" aria-hidden="true" tabindex="-1">#</a></h2>
     <dl class="factor-list">
       <dt id="risk-matrix"><a href="../three-random-thoughts/#risk-matrix">2D risk matrix</a></dt>
-      <dd>The usual chart of risk: severity of consequence, from catastrophic to no effect, against likelihood of occurrence, from frequent to improbable. Mike's addition is a third dimension it doesn't capture, the number of trials: a low but non-zero probability grows as the trials increase, so a risk may move from acceptable to unacceptable.</dd>
+      <dd>The usual chart of risk: severity of consequence, from catastrophic to no effect, against likelihood of occurrence, from frequent to improbable. Mike’s addition is a third dimension it doesn’t capture, the number of trials: a low but non-zero probability grows as the trials increase, so a risk may move from acceptable to unacceptable.</dd>
 
       <dt id="analysis-of-successes"><a href="../analyzing-success/#missing">Analysis of successes</a></dt>
-      <dd>The remedy. A careful and critical pre- and post-test analysis of our successes, not only our failures, aimed at finding the successes that were wholly or partly the result of good fortune rather than sound decision making. It looks for the mistakes of the future, the ones we haven't seen yet.</dd>
+      <dd>The remedy. A careful and critical pre- and post-test analysis of our successes, not only our failures, aimed at finding the successes that were wholly or partly the result of good fortune rather than sound decision making. It looks for the mistakes of the future, the ones we haven’t seen yet.</dd>
 
       <dt id="deceptive-mathematics"><a href="../deceptive-mathematics/">Deceptive mathematics</a></dt>
       <dd>Factor I. High odds produce long strings of success, and each success feels like confirmation. But below a certain probability of success, repeated go decisions lead eventually to an unacceptable probability of failure: at 99 percent, eighteen go decisions carry a 17 percent chance that at least one fails, one chance in six.</dd>
 
       <dt id="go-decision"><a href="../framework/#premises">Go decision</a></dt>
-      <dd>The decision to proceed. The framework's first premise is that the primary determinant of safety is the quality of decision making; its second, that when a negative outcome could be catastrophic, the go decision must be made only when a very high degree of confidence in a positive outcome exists.</dd>
+      <dd>The decision to proceed. The framework’s first premise is that the primary determinant of safety is the quality of decision making; its second, that when a negative outcome could be catastrophic, the go decision must be made only when a very high degree of confidence in a positive outcome exists.</dd>
 
       <dt id="metric-and-target"><a href="../analyzing-success/#metric">Metric and target</a></dt>
-      <dd>How to analyze a success. Before the test, establish a quantitative metric that relates to safety, and set a target for performance with a significant margin of safety. Then measure actual performance against the target: an outcome that didn't meet it is an apparent success that perhaps should not be considered a success.</dd>
+      <dd>How to analyze a success. Before the test, establish a quantitative metric that relates to safety, and set a target for performance with a significant margin of safety. Then measure actual performance against the target: an outcome that didn’t meet it is an apparent success that perhaps should not be considered a success.</dd>
 
-      <dt id="murphys-corollary"><a href="../murphys-corollary/#corollary">Murphy's Corollary</a></dt>
-      <dd>Factor II. <q>Anything that did not go wrong could not have gone wrong.</q> We don't really believe Murphy's Law, but we are surprisingly susceptible to an unconscious belief in its corollary: we take a positive outcome as evidence that a positive outcome was inevitable.</dd>
+      <dt id="murphys-corollary"><a href="../murphys-corollary/#corollary">Murphy’s Corollary</a></dt>
+      <dd>Factor II. <q>Anything that did not go wrong could not have gone wrong.</q> We don’t really believe Murphy’s Law, but we are surprisingly susceptible to an unconscious belief in its corollary: we take a positive outcome as evidence that a positive outcome was inevitable.</dd>
 
       <dt id="owning-the-risk"><a href="../three-random-thoughts/#owning-the-risk">Owning the risk</a></dt>
-      <dd>What it takes to truly accept a risk: to live through, in a virtual sense, all the anticipated consequences of the failure, and to agree that it will be acceptable when it happens. Not only willing to accept the loss, but willing to defend it as acceptable. If you can't, re-examine the decisions that led to the risk.</dd>
+      <dd>What it takes to truly accept a risk: to live through, in a virtual sense, all the anticipated consequences of the failure, and to agree that it will be acceptable when it happens. Not only willing to accept the loss, but willing to defend it as acceptable. If you can’t, re-examine the decisions that led to the risk.</dd>
 
       <dt id="pressure-to-go"><a href="../pressure-to-go/">Pressure to go</a></dt>
       <dd>Factor III. Deadlines, budgets, expectations and our own ego give us a strong incentive to go even when we have doubts. A successful go relieves the pressure, so we are quick to validate it as a good decision; a no-go only increases the pressure next time. Either way, the reinforcement can operate in the wrong direction.</dd>
 
       <dt id="smearing"><a href="../luck-and-uncertainty/#smearing">Smearing</a></dt>
-      <dd>Mike's picture of luck, by analogy with quantum smearing. Skill and judgment set an expected safety level, but luck smears where we actually end up: a little when unknowns are few, a lot when they are many. The more luck can play a part, the more likely we are to misjudge our own skill and judgment afterwards.</dd>
+      <dd>Mike’s picture of luck, by analogy with quantum smearing. Skill and judgment set an expected safety level, but luck smears where we actually end up: a little when unknowns are few, a lot when they are many. The more luck can play a part, the more likely we are to misjudge our own skill and judgment afterwards.</dd>
 
       <dt id="vertically-unconstrained"><a href="../three-random-thoughts/#safety-culture">Vertically unconstrained</a></dt>
-      <dd>A safety culture in which a team member may escalate safety concerns without limit up the chain of command within the safety system. Mike counts it, with one other, the most important feature of a safety culture: that every team member knows he or she is both empowered and responsible to flag safety issues.</dd>
+      <dd>A safety culture in which a team member may escalate safety concerns without limit up the chain of command within the safety system. Mike counts it as one of the two most important features of a safety culture; the other is that every team member knows he or she is both empowered and responsible to flag safety issues.</dd>
     </dl>
 
-    <h2 id="other-terms">Other terms used on this site <a class="anchor" href="#other-terms" aria-label="Link to this section">#</a></h2>
+    <h2 id="other-terms">Other terms used on this site&nbsp;<a class="anchor" href="#other-terms" aria-hidden="true" tabindex="-1">#</a></h2>
 
     <h3 id="hang-gliding-terms">Hang-gliding terms, for test pilots</h3>
     <dl class="factor-list">
+      <dt id="downtube">Downtube</dt>
+      <dd>One of the two side tubes of a hang glider’s triangular control frame, running from the wing down to the control bar. <a href="../case-studies/certification-launch-2015/">The 2015 certification launch</a></dd>
+
       <dt id="flare">Flare</dt>
       <dd>The last move of a landing. The pilot pushes the control bar out to pitch the nose up and stall the wing, killing the forward speed so the pilot can land on their feet. <a href="../case-studies/top-landing-1995/">The 1995 top landing</a></dd>
+
+      <dt id="katabatic">Katabatic flow</dt>
+      <dd>Air flowing downhill under its own weight, usually as slopes cool toward evening. On a launch facing up the hill, it turns a helpful upslope breeze into a tailwind. <a href="../case-studies/certification-launch-2015/">The 2015 certification launch</a></dd>
 
       <dt id="rotor">Rotor</dt>
       <dd>Turbulent, tumbling air on the downwind side of a hill or ridge, where the wind spills over the top. <a href="../case-studies/top-landing-1995/">The 1995 top landing</a></dd>
@@ -100,16 +110,19 @@
       <dd>The slowing of the wind close to the ground, caused by friction with the surface. A glider descending through it into the wind loses airspeed as the headwind drops away. <a href="../case-studies/top-landing-1995/">The 1995 top landing</a></dd>
     </dl>
 
-    <h3 id="aerospace-terms">Aerospace terms, for hang glider pilots</h3>
+    <h3 id="aerospace-terms">Aerospace terms, for hang-glider pilots</h3>
     <dl class="factor-list">
+      <dt id="agl">agl</dt>
+      <dd>Above ground level: height measured from the ground below, rather than from sea level. <a href="../murphys-corollary/#warning-signs">Murphy’s Corollary</a></dd>
+
       <dt id="blow-by">Blow-by</dt>
-      <dd>Hot gas leaking past a seal. On the Space Shuttle's solid rocket boosters, it meant gas from inside the motor getting past the O-rings in the joints between the booster's segments. <a href="../case-studies/challenger/">Challenger</a></dd>
+      <dd>Hot gas leaking past a seal. On the Space Shuttle’s solid rocket boosters, it meant gas from inside the motor getting past the O-rings in the joints between the booster’s segments. <a href="../case-studies/challenger/">Challenger</a></dd>
 
       <dt id="o-ring">O-ring</dt>
-      <dd>A rubber ring set in a groove to seal a joint. Each joint between the segments of the Shuttle's solid rocket boosters was sealed by two of them. <a href="../case-studies/challenger/">Challenger</a></dd>
+      <dd>A rubber ring set in a groove to seal a joint. Each joint between the segments of the Shuttle’s solid rocket boosters was sealed by two of them. <a href="../case-studies/challenger/">Challenger</a></dd>
 
       <dt id="plugs-out">Plugs-out test</dt>
-      <dd>A ground test in which a spacecraft is disconnected from ground power and runs on its own, as it would in flight. Apollo 1's crew died in a fire during a plugs-out test on the launch pad. <a href="../case-studies/apollo-1/">Apollo 1</a></dd>
+      <dd>A ground test in which a spacecraft is disconnected from ground power and runs on its own, as it would in flight. Apollo 1’s crew died in a fire during a plugs-out test on the launch pad. <a href="../case-studies/apollo-1/">Apollo 1</a></dd>
     </dl>
   </div>
 
@@ -123,10 +136,10 @@
 
   <section class="cite" aria-labelledby="cite-title">
     <h2 id="cite-title">Cite this page</h2>
-    <p class="cite-apa">Meier, M. (2026, November 12). <em>Glossary: The framework's own terms</em> (Edition 1.0). meiersafe.com. https://meiersafe.com/glossary/</p>
+    <p class="cite-apa">Meier, M. (2026, November 12). <em>Glossary: The framework’s own terms</em> (Edition 1.0). meiersafe.com. https://meiersafe.com/glossary/</p>
     <details>
       <summary>Chicago and BibTeX</summary>
-      <p>Meier, Mike. "Glossary: The Framework's Own Terms." Edition 1.0. meiersafe.com, November 12, 2026. https://meiersafe.com/glossary/.</p>
+      <p>Meier, Mike. “Glossary: The Framework’s Own Terms.” Edition 1.0. meiersafe.com, November 12, 2026. https://meiersafe.com/glossary/.</p>
 <pre>@misc{meier2026glossary,
   author = {Meier, Mike},
   title  = {Glossary: The Framework's Own Terms},

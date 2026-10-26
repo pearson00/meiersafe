@@ -27,13 +27,23 @@ cat > site/_redirects <<'EOF'
 /about-mike-meier/* /about/ 301
 /about-mike-meier /about/ 301
 /mike-meier/ /about/ 301
+/mike-meier /about/ 301
 /introduction/ / 301
+/introduction / 301
 /safety-and-risk-mitigation/ /framework/ 301
+/safety-and-risk-mitigation /framework/ 301
 /contact-and-booking/ /about/#contact 301
+/contact-and-booking /about/#contact 301
 /video/ /speaking/#video 301
+/video /speaking/#video 301
 /home/news/ /speaking/ 301
+/home/news /speaking/ 301
+/home/ / 301
+/home / 301
 /speaking/testimonials/ /speaking/#testimonials 301
+/speaking/testimonials /speaking/#testimonials 301
 /testimonials/* /speaking/#testimonials 301
+/testimonials /speaking/#testimonials 301
 /2015/03/28/jack-northrop-award/ /about/ 301
 /2015/05/17/rogallo-foundation-hall-of-fame-induction/ /about/ 301
 /2016/03/11/rob-kells-memorial-award-from-ushpa/ /about/ 301
@@ -41,6 +51,9 @@ cat > site/_redirects <<'EOF'
 /2016/07/18/mike-meier-at-scaled-composites/ /speaking/ 301
 /2016/07/28/eaa-airventure-2016/ /speaking/ 301
 /2018/01/26/gulfstream-aerospace/ /speaking/ 301
+/2015/* /about/ 301
+/2016/* /speaking/ 301
+/2018/* /speaking/ 301
 /author/* /about/ 301
 /category/* / 301
 /feed/* / 301
@@ -94,10 +107,37 @@ Allow: /
 Sitemap: https://meiersafe.com/sitemap.xml
 EOF
 
+# Security headers: HTTPS only, and nothing loads from anywhere but this site, except the Vimeo player.
+cat > site/_headers <<'EOF'
+/*
+  Strict-Transport-Security: max-age=31536000
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; media-src 'self'; frame-src https://player.vimeo.com; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+EOF
+
 if grep -rlIE '\{\{|<!--#' site >/dev/null; then
   echo "build: unreplaced placeholder in site/:" >&2
   grep -rnIE '\{\{|<!--#' site >&2
   exit 1
+fi
+
+# The one-page handout PDF is printed from the page by scripts/handout_pdf.py; refuse to finish
+# while the page, partials, stylesheet or fonts have changed since it was last printed.
+if [ "$(sh scripts/handout_hash.sh)" != "$(cat scripts/handout_pdf.sha256 2>/dev/null)" ] || [ ! -f site/briefing/handout/meiersafe-handout.pdf ]; then
+  echo "build: the handout PDF is out of date. Run: uv run python scripts/handout_pdf.py, then build again." >&2
+  exit 1
+fi
+
+# Launch build: nothing marked as draft may remain (launch-cleanup audit, section 5).
+# Only pages are searched; style.css names these classes too. The December 11 brief stays "(planned)" until it happens.
+if [ "$DRAFT" = "0" ]; then
+  left=$(grep -rnIE 'class="(proto-banner|draft-flag|placeholder)|\[unclear\]|\(planned\)' site --include='*.html' | grep -v 'December 11, 2026' || true)
+  if [ -n "$left" ]; then
+    echo "build: draft markers remain in a launch build:" >&2
+    echo "$left" >&2
+    exit 1
+  fi
 fi
 if [ "$DRAFT" = "1" ]; then mode="draft: noindex on every page"; else mode="launch: indexable"; fi
 echo "built site/ (design D at the root; $mode)"

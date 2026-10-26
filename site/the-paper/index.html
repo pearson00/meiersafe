@@ -24,10 +24,11 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Anything that did not go wrong could not have gone wrong. Mike Meier, meiersafe.com">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "The paper (SETP, 2015)", "description": "Mike Meier's 2015 paper to the Society of Experimental Test Pilots: abstract, where to read it, how to cite it.", "url": "https://meiersafe.com/the-paper/", "author": {"@type": "Person", "name": "Mike Meier", "url": "https://meiersafe.com/about/", "jobTitle": "Test pilot", "award": "Fellow, Society of Experimental Test Pilots (2026)", "memberOf": {"@type": "Organization", "name": "Society of Experimental Test Pilots"}}, "license": "https://creativecommons.org/licenses/by-sa/4.0/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "The paper (SETP, 2015)", "description": "Mike Meier's 2015 paper to the Society of Experimental Test Pilots: abstract, where to read it, how to cite it.", "url": "https://meiersafe.com/the-paper/", "author": {"@type": "Person", "name": "Mike Meier", "url": "https://meiersafe.com/about/", "award": "Fellow, Society of Experimental Test Pilots (2026)", "memberOf": {"@type": "Organization", "name": "Society of Experimental Test Pilots"}}, "license": "https://creativecommons.org/licenses/by-sa/4.0/"}</script>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body class="page-article" data-section="the-paper">
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="proto-banner">Draft for Mike's review · not yet launched</div>
 
 <header class="site-header">
@@ -41,85 +42,85 @@
   </nav>
 </header>
 
-<main class="article">
+<main id="main" class="article">
   <nav class="position" aria-label="Reading position">
     <a class="pos-prev" href="../three-random-thoughts/">← Three Random Thoughts On Safety</a>
     <span class="pos-here">Step 10 of 10 · The full paper</span>
     <a class="pos-next" href="../briefing/">Briefing Kit →</a>
   </nav>
 
-  <h1>The paper: <span class="subtitle"><em>Lessons Learned and Murphy's Corollary</em></span></h1>
+  <h1>The paper: <span class="subtitle"><em>Lessons Learned and Murphy’s Corollary</em></span></h1>
 
   <div class="key-idea">
     <p class="key-label">In brief</p>
-    <p>Presented three times to flight-test audiences in 2015, among five presentations that year: at the SETP West Coast Section Symposium in San Diego in March, the Flight Test Safety Workshop in Scottsdale in May, and the SETP 59th Annual Symposium in Anaheim in September. The San Diego presentation won SETP's Jack Northrop Award for the most outstanding technical paper. 26 pages, 16 notes. Written for the spoken talk, with material that didn't fit the time added in indented italics.</p>
+    <p>Presented three times to flight-test audiences in 2015, among five presentations that year: at the SETP West Coast Section Symposium in San Diego in March, the Flight Test Safety Workshop in Scottsdale in May, and the SETP 59th Annual Symposium in Anaheim in September. The San Diego presentation won SETP’s Jack Northrop Award for the Most Outstanding Technical Paper. 26 pages, 16 notes. Written for the spoken talk, with material that didn’t fit the time added in indented italics.</p>
   </div>
 
   <nav class="toc" aria-labelledby="toc-title">
     <p id="toc-title" class="toc-title">On this page</p>
     <ol>
       <li><a href="#abstract">Abstract</a></li>
-      <li><a href="#conclusion">The paper's conclusion</a></li>
+      <li><a href="#conclusion">The paper’s conclusion</a></li>
       <li><a href="#read">Read the paper</a></li>
-      <li><a href="#notes">The paper's notes</a></li>
+      <li><a href="#notes">The paper’s notes</a></li>
       <li><a href="#video">The talk on video</a></li>
       <li><a href="#cite">How to cite the paper</a></li>
     </ol>
   </nav>
 
   <div class="body">
-    <h2 id="abstract">Abstract <a class="anchor" href="#abstract" aria-label="Link to this section">#</a></h2>
+    <h2 id="abstract">Abstract&nbsp;<a class="anchor" href="#abstract" aria-hidden="true" tabindex="-1">#</a></h2>
     <p>Safety in flight test requires that when the potential consequences of a negative outcome are catastrophic, the go decision must be made only when a very high degree of confidence in a positive outcome exists. When this protocol is followed, it is a natural result that a very high percentage of outcomes will be positive, and it is further likely that we will see a long string of consecutive positive outcomes. When this happens a feedback loop is created in which the go decision is validated by the positive outcome as having been a good decision, and is therefore reinforced and made more likely to be made again in the future under similar circumstances. Beyond that, often the lesson learned from a series of consecutive positive outcomes is that our evaluative criteria for making the go decision were unnecessarily conservative; not only were we correct to make the go decision, but we could have made it under even somewhat less favorable circumstances. This can lead to a gradual lowering of our standards.</p>
     <p>However, consecutive successful outcomes can mask go decisions that may be fundamentally unsound, if the success is the result, either partly or entirely, of good fortune. Below a certain threshold of probability for success, repeated go decisions will lead eventually to an unacceptable probability of failure. At 99% probability of success, eighteen events results in a cumulative probability of failure for at least one event of 17%, or one chance in six.</p>
-    <p>The common idiomatic statement of Murphy's Law is: "Anything that can go wrong will go wrong." This is likely not what Murphy said, nor is it the best statement of the lesson learned from Murphy's experience, and in fact, no one who thinks about it can actually believe it. Almost anything could go wrong, and if it were really true that anything that could go wrong would go wrong, then most everything would go wrong, and most things don't. But if Murphy's Law were true, then a corollary of this "law" would also be true: "Anything that did not go wrong could not have gone wrong." And while we don't really believe Murphy's Law, we are surprisingly susceptible to being seduced by an unconscious belief in Murphy's corollary – that is, we take a positive outcome as evidence that a positive outcome was inevitable.</p>
-    <p>Combining with our failure to appreciate the nature of probability and our susceptibility to Murphy's corollary is the inevitable and powerful pressure we often experience to make the go decision under less than favorable circumstances. This pressure is a natural and unavoidable consequence of project deadlines, budgets, and performance expectations. It induces us to make the go decision when we otherwise might not, and to validate the go decision afterwards when the outcome is successful, when that validation may be inappropriate. A means for combating the effects of these three factors is to conduct a rigorous and quantitative pre and post-test analysis not only of failed outcomes, but also of successful ones, with the goal of identifying apparently successful outcomes that may have followed bad decisions, and that were successful because of good fortune.</p>
+    <p>The common idiomatic statement of Murphy’s Law is: “Anything that can go wrong will go wrong.” This is likely not what Murphy said, nor is it the best statement of the lesson learned from Murphy’s experience, and in fact, no one who thinks about it can actually believe it. Almost anything could go wrong, and if it were really true that anything that could go wrong would go wrong, then most everything would go wrong, and most things don’t. But if Murphy’s Law were true, then a corollary of this “law” would also be true: “Anything that did not go wrong could not have gone wrong.” And while we don’t really believe Murphy’s Law, we are surprisingly susceptible to being seduced by an unconscious belief in Murphy’s corollary – that is, we take a positive outcome as evidence that a positive outcome was inevitable.</p>
+    <p>Combining with our failure to appreciate the nature of probability and our susceptibility to Murphy’s corollary is the inevitable and powerful pressure we often experience to make the go decision under less than favorable circumstances. This pressure is a natural and unavoidable consequence of project deadlines, budgets, and performance expectations. It induces us to make the go decision when we otherwise might not, and to validate the go decision afterwards when the outcome is successful, when that validation may be inappropriate. A means for combating the effects of these three factors is to conduct a rigorous and quantitative pre and post-test analysis not only of failed outcomes, but also of successful ones, with the goal of identifying apparently successful outcomes that may have followed bad decisions, and that were successful because of good fortune.</p>
 
-    <h2 id="conclusion">The paper's conclusion <a class="anchor" href="#conclusion" aria-label="Link to this section">#</a></h2>
+    <h2 id="conclusion">The paper’s conclusion&nbsp;<a class="anchor" href="#conclusion" aria-hidden="true" tabindex="-1">#</a></h2>
     <p class="source-flag">From the paper, its closing paragraph.</p>
     <blockquote class="pull">A rigorous analysis of successful outcomes would constitute an expansion of our source material for lessons learned. If such a process allows us to uncover some decisions or procedures that may have been in some way flawed, we may expand the degree to which our lessons learned enhance flight test safety.</blockquote>
-    <p>The paper's acknowledgment:</p>
+    <p>The paper’s acknowledgment:</p>
     <blockquote class="pull">The author gratefully acknowledges the assistance of Colin A. Fries and the NASA HQ History Program Office in gaining access to original source material used for this paper.</blockquote>
 
-    <h2 id="read">Read the paper <a class="anchor" href="#read" aria-label="Link to this section">#</a></h2>
+    <h2 id="read">Read the paper&nbsp;<a class="anchor" href="#read" aria-hidden="true" tabindex="-1">#</a></h2>
     <ul class="downloads">
       <li><a href="lessons-learned-and-murphys-corollary-meier-cc-by-sa.pdf">The paper as a PDF</a> (2.2 MB, 27 pages): the 2015 paper as presented, with a cover page giving its CC BY-SA 4.0 license</li>
-      <li><a href="https://flighttestsafety.org/images/Lessons_Learned__Murphys_Corollary.pdf">The 2015 PDF at the Flight Test Safety Committee</a> (the original, "All Rights Reserved" edition)</li>
+      <li><a href="https://flighttestsafety.org/images/Lessons_Learned__Murphys_Corollary.pdf">The 2015 PDF at the Flight Test Safety Committee</a> (the original, “All Rights Reserved” edition)</li>
     </ul>
-    <p>The paper is the source for most of this site. Each page here notes what it is adapted from, and the paper's notes appear beside the text.</p>
+    <p>The paper is the source for most of this site. Each page here notes what it is adapted from, and the paper’s notes appear beside the text.</p>
 
-    <h2 id="notes">The paper's notes <a class="anchor" href="#notes" aria-label="Link to this section">#</a></h2>
-    <p class="source-flag">From the paper: its 16 notes, in this site's citation style, each linked to the page where it appears beside the text.</p>
+    <h2 id="notes">The paper’s notes&nbsp;<a class="anchor" href="#notes" aria-hidden="true" tabindex="-1">#</a></h2>
+    <p class="source-flag">From the paper: its 16 notes, in this site’s citation style, each linked to the page where it appears beside the text.</p>
     <ol class="paper-notes">
-      <li>"Murphy's laws origin," excerpted from <em>The Desert Wings</em>, March 3, 1978, Murphy's Laws site, accessed September 5, 2015. <a href="../murphys-corollary/#note-1">Murphy's Corollary</a></li>
-      <li>Nick T. Spark, "The Road to Murphy's Law," <em>Improbable Research</em>, 2003. <a href="../murphys-corollary/#note-1">Murphy's Corollary</a></li>
-      <li>"Murphy's Law," Wikipedia, accessed September 5, 2015. <a href="../murphys-corollary/#note-3">Murphy's Corollary</a></li>
+      <li>“Murphy’s laws origin,” excerpted from <em>The Desert Wings</em>, March 3, 1978, Murphy’s Laws site, accessed September 5, 2015. <a href="../murphys-corollary/#note-1">Murphy’s Corollary</a></li>
+      <li>Nick T. Spark, “The Road to Murphy’s Law,” <em>Improbable Research</em>, 2003. <a href="../murphys-corollary/#note-1">Murphy’s Corollary</a></li>
+      <li>“Murphy’s Law,” Wikipedia, accessed September 5, 2015. <a href="../murphys-corollary/#note-3">Murphy’s Corollary</a></li>
       <li>Chuck Yeager and Leo Janos, <em>Yeager: An Autobiography</em> (New York: Bantam Books, 1985), 185. <a href="../case-studies/f-86-aileron-bolt/#note-4">The F-86 aileron bolt</a></li>
       <li><em>Investigation Into Apollo 204 Accident: Hearings Before the Subcommittee on NASA Oversight of the Committee on Science and Astronautics, U.S. House of Representatives, Ninetieth Congress</em>, April 10, 1967, Evening Session, history.nasa.gov, accessed September 5, 2015, http://history.nasa.gov/Apollo204/bormanhouse1.pdf, 81. <a href="../case-studies/apollo-1/#note-5">Apollo 1</a></li>
       <li>Ibid., 87. <a href="../case-studies/apollo-1/#note-6">Apollo 1</a></li>
-      <li>Clinton P. Anderson et al., "Apollo 204 Accident: Report of the Committee on Aeronautical and Space Sciences, United States Senate, Report N. 956," NASA Historical Reference Collection, NASA History Office, NASA Headquarters, Washington, DC, January 30, 1968, http://history.nasa.gov/as204_senate_956.pdf, 9, 10. <a href="../case-studies/apollo-1/#note-7">Apollo 1</a></li>
-      <li>William P. Rogers et al., <em>Report of the Presidential Commission on the Space Shuttle Challenger Accident</em>, NASA Historical Reference Collection, NASA History Office, NASA Headquarters, Washington, DC, June 6, 1986, http://history.nasa.gov/rogersrep/genindex.htm, ch. V, "Findings" [104]. <a href="../case-studies/challenger/#note-8">Challenger</a></li>
-      <li>Ibid., ch. VI, "Early Design." <a href="../case-studies/challenger/#note-9">Challenger</a></li>
-      <li>Ibid., ch. VI, "Findings," item 3. <a href="../case-studies/challenger/#note-10">Challenger</a></li>
+      <li>Clinton P. Anderson et al., “Apollo 204 Accident: Report of the Committee on Aeronautical and Space Sciences, United States Senate, Report N. 956,” NASA Historical Reference Collection, NASA History Office, NASA Headquarters, Washington, DC, January 30, 1968, http://history.nasa.gov/as204_senate_956.pdf, 9, 10. <a href="../case-studies/apollo-1/#note-7">Apollo 1</a></li>
+      <li>William P. Rogers et al., <em>Report of the Presidential Commission on the Space Shuttle Challenger Accident</em>, NASA Historical Reference Collection, NASA History Office, NASA Headquarters, Washington, DC, June 6, 1986, http://history.nasa.gov/rogersrep/genindex.htm, ch. V, “Findings” [104]. <a href="../case-studies/challenger/#note-8">Challenger</a></li>
+      <li>Ibid., ch. VI, “Early Design.” <a href="../case-studies/challenger/#note-9">Challenger</a></li>
+      <li>Ibid., ch. VI, “Findings,” item 3. <a href="../case-studies/challenger/#note-10">Challenger</a></li>
       <li>Harold W. Gehman Jr. et al., <em>Report of Columbia Accident Investigation Board</em>, National Aeronautics and Space Administration, August 26, 2003, http://www.nasa.gov/columbia/home/CAIB_Vol1.html, ch. 6.1. <a href="../case-studies/columbia/#note-11">Columbia</a></li>
       <li>Ibid. <a href="../case-studies/columbia/#note-12">Columbia</a></li>
-      <li>Ibid., ch. 11, "Recommendations." <a href="../case-studies/columbia/#note-13">Columbia</a></li>
-      <li>Rogers et al., <em>Report of the Presidential Commission</em>, ch. IX, sec. VII, "Flight Rate." <a href="../pressure-to-go/#note-14">The pressure to go</a> · <a href="../case-studies/challenger/#note-14">Challenger</a></li>
+      <li>Ibid., ch. 11, “Recommendations.” <a href="../case-studies/columbia/#note-13">Columbia</a></li>
+      <li>Rogers et al., <em>Report of the Presidential Commission</em>, ch. IX, sec. VII, “Flight Rate.” <a href="../pressure-to-go/#note-14">The pressure to go</a> · <a href="../case-studies/challenger/#note-14">Challenger</a></li>
       <li>Ibid., ch. V. <a href="../case-studies/challenger/#note-15">Challenger</a></li>
       <li>Alan Shepard and Deke Slayton, <em>Moonshot</em> (Atlanta: Turner Publishing, 1994), 198. <a href="../pressure-to-go/#note-16">The pressure to go</a> · <a href="../case-studies/apollo-1/#note-16">Apollo 1</a></li>
     </ol>
 
-    <h2 id="video">The talk on video <a class="anchor" href="#video" aria-label="Link to this section">#</a></h2>
+    <h2 id="video">The talk on video&nbsp;<a class="anchor" href="#video" aria-hidden="true" tabindex="-1">#</a></h2>
     <figure class="video-figure">
       <div class="video"><iframe src="https://player.vimeo.com/video/1239136153?dnt=1" title="Lessons Learned and Murphy's Corollary: Mike Meier at SETP, Anaheim, September 24, 2015" allow="fullscreen; picture-in-picture" loading="lazy"></iframe></div>
-      <figcaption>The Anaheim talk, September 24, 2015, recorded by SETP and shown with SETP's permission. The questions that followed are transcribed on <a href="../speaking/#anaheim-qa">Speaking</a>.</figcaption>
+      <figcaption data-watch="meiersafe.com/speaking/#video">The Anaheim talk, September 24, 2015, recorded by SETP and shown with SETP’s permission. The questions that followed are transcribed on <a href="../speaking/#anaheim-qa">Speaking</a>.</figcaption>
     </figure>
-    <p>Mike also discussed the paper on the Flight Test Safety Committee podcast in May 2024: <a href="../speaking/#podcast">The podcast</a>.</p>
+    <p>Mike also discussed the paper on <em>On Condition</em>, the Flight Test Safety Committee’s podcast, in May 2024: <a href="../speaking/#podcast">The podcast</a>.</p>
 
-    <h2 id="cite">How to cite the paper <a class="anchor" href="#cite" aria-label="Link to this section">#</a></h2>
-    <p class="cite-apa">Meier, M. W. (2015). <em>Lessons learned and Murphy's corollary</em> [Paper presentation]. Society of Experimental Test Pilots 59th Annual Symposium, Anaheim, CA, United States.</p>
+    <h2 id="cite">How to cite the paper&nbsp;<a class="anchor" href="#cite" aria-hidden="true" tabindex="-1">#</a></h2>
+    <p class="cite-apa">Meier, M. W. (2015). <em>Lessons learned and Murphy’s corollary</em> [Paper presentation]. Society of Experimental Test Pilots 59th Annual Symposium, Anaheim, CA, United States.</p>
     <details>
       <summary>Chicago and BibTeX</summary>
-      <p>Meier, Michael W. "Lessons Learned and Murphy's Corollary." Paper presented at the Society of Experimental Test Pilots 59th Annual Symposium, Anaheim, CA, September 2015. https://meiersafe.com/the-paper/.</p>
+      <p>Meier, Michael W. “Lessons Learned and Murphy’s Corollary.” Paper presented at the Society of Experimental Test Pilots 59th Annual Symposium, Anaheim, CA, September 2015. https://meiersafe.com/the-paper/.</p>
 <pre>@inproceedings{meier2015lessons,
   author    = {Meier, Michael W.},
   title     = {Lessons Learned and Murphy's Corollary},
@@ -133,7 +134,7 @@
   </div>
 
   <nav class="next-up" aria-label="Next">
-    <p class="next-label">You've reached the end of the reading order. Next, for trainers</p>
+    <p class="next-label">You’ve reached the end of the reading order. Next, for trainers</p>
     <a href="../briefing/">Briefing Kit <span>Using these ideas with your own team: printable pages and every discussion question in one place.</span></a>
   </nav>
 
@@ -141,8 +142,8 @@
 </main>
 
 <footer class="site-footer">
-  <p>Content by Mike Meier, licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; third-party material excluded.</p>
-  <p class="footer-nav"><a href="../">Home</a> · <a href="../framework/">Framework</a> · <a href="../case-studies/">Case studies</a> · <a href="../questions/">Hard questions</a> · <a href="../briefing/">Briefing</a> · <a href="../the-paper/">The paper</a> · <a href="../origins/">Origins</a> · <a href="../speaking/">Speaking</a> · <a href="../glossary/">Glossary</a> · <a href="../about/">About</a> · <a href="../license/">License</a></p>
+  <p>Content by Mike Meier, licensed <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>; third-party material excluded.</p>
+  <p class="footer-nav"><a href="../">Home</a> · <a href="../framework/">Framework</a> · <a href="../case-studies/">Case studies</a> · <a href="../questions/">Hard questions</a> · <a href="../briefing/">Briefing</a> · <a href="../the-paper/">The paper</a> · <a href="../origins/">Origins</a> · <a href="../speaking/">Speaking</a> · <a href="../glossary/">Glossary</a> · <a href="../about/">About</a> · <a href="../license/">License</a> · <a href="../about/#contact">Contact</a></p>
 </footer>
 </body>
 </html>

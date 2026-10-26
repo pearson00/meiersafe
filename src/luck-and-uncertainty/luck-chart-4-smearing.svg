@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 610" width="400" height="610" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 636" width="400" height="636" role="img" aria-labelledby="t d">
   <title id="t">Luck smears the safety level</title>
-  <desc id="d">The same Safety Level column, from Poor (red) at the bottom through Caution (yellow) to Great (green) at the top, with Skill up the left side from Less to More, Judgment up the right side from Worse to Better, and Unknowns across the top from Less to More. A line joins a high skill point on the left to a good judgment point on the right, and two vertical lines cross it, one for few unknowns near the left edge and one for many unknowns near the right edge. Each crossing point is smeared into an oval. On the left the oval is small and stays within the Great region. On the right it is tall, reaching down out of the green toward the Caution region and up above the level of the judgment point. After Mike Meier's 2021 chart.</desc>
+  <desc id="d">The same Safety Level column, from Poor (red) at the bottom through Caution (yellow) to Great (green) at the top, with Skill up the left side from Less to More, Judgment up the right side from Worse to Better, and Unknowns across the top from Less to More. A line joins a high skill point on the left to a good judgment point on the right, and two vertical lines cross it, one for few unknowns near the left edge and one for many unknowns near the right edge. Each crossing point is smeared into an oval. On the left the oval is small and stays within the Great region. On the right it is tall, reaching down out of the green toward the Caution region and up above the level of the judgment point. After Mike Meier's 2021 chart, itself after Art Tomassetti's chart in Flight Test Safety Fact, May 2021, as noted under the chart.</desc>
   <defs>
     <linearGradient id="safety" x2="0" y2="1">
       <stop offset="0" stop-color="#2e9e44"/>
@@ -14,7 +14,7 @@
     </linearGradient>
     <path id="star" d="M0.0 -8.5L2.1 -2.9L8.1 -2.6L3.4 1.1L5.0 6.9L0.0 3.6L-5.0 6.9L-3.4 1.1L-8.1 -2.6L-2.1 -2.9Z" fill="#14202b" stroke="#ffffff" stroke-width="1" stroke-linejoin="round"/>
   </defs>
-  <rect width="400" height="610" fill="#ffffff"/>
+  <rect width="400" height="636" fill="#ffffff"/>
 
   <!-- Safety Level column -->
   <rect x="109" y="59" width="191" height="500" rx="3" fill="url(#safety)"/>
@@ -36,6 +36,7 @@
       <text x="304" y="105">Better</text>
       <text x="304" y="553">Worse</text>
     </g>
+    <text x="200" y="622" font-size="12.5" fill="#55626f" text-anchor="middle">After Art Tomassetti – Flight Test Safety Fact – May 2021</text>
     <g font-size="19" font-weight="600" font-style="italic" text-anchor="middle">
       <text x="202" y="83">Great</text>
       <text x="193" y="302">Caution</text>

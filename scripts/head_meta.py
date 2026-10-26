@@ -19,7 +19,6 @@ AUTHOR = {
     "@type": "Person",
     "name": "Mike Meier",
     "url": f"{ORIGIN}/about/",
-    "jobTitle": "Test pilot",
     "award": "Fellow, Society of Experimental Test Pilots (2026)",
     "memberOf": {"@type": "Organization", "name": "Society of Experimental Test Pilots"},
 }

@@ -1,5 +1,17 @@
 /* Prototype D · Briefing, quieter: B's boxes and numbered sections, with A's reading text and lighter, smaller headings. */
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+/* IBM Plex (SIL Open Font License, fonts/OFL.txt), served from this site: latin and latin-ext only. */
+@font-face { font-family: "IBM Plex Sans"; font-style: italic; font-weight: 400; font-display: swap; src: url("fonts/ibm-plex-sans-400-italic-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "IBM Plex Sans"; font-style: italic; font-weight: 400; font-display: swap; src: url("fonts/ibm-plex-sans-400-italic-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400 700; font-display: swap; src: url("fonts/ibm-plex-sans-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400 700; font-display: swap; src: url("fonts/ibm-plex-sans-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "IBM Plex Serif"; font-style: italic; font-weight: 400; font-display: swap; src: url("fonts/ibm-plex-serif-400-italic-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "IBM Plex Serif"; font-style: italic; font-weight: 400; font-display: swap; src: url("fonts/ibm-plex-serif-400-italic-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "IBM Plex Serif"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/ibm-plex-serif-400-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "IBM Plex Serif"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/ibm-plex-serif-400-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "IBM Plex Serif"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/ibm-plex-serif-600-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "IBM Plex Serif"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/ibm-plex-serif-600-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "IBM Plex Serif"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/ibm-plex-serif-700-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "IBM Plex Serif"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/ibm-plex-serif-700-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 :root { --amber-text: #8a5a00;
   --bg: #ffffff;
@@ -20,7 +32,7 @@ body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1.0625rem/
 /* Reading text is serif; headings and the briefing furniture stay sans. */
 h1, h2, .proto-banner, .site-header, .kicker, figcaption, .fw-list strong, .fw-more, .cta, .position, .toc, .glance, .key-label, .byline, .note, .draft-flag, .read-first, .questions li::before, .cite, .license-line, .site-footer { font-family: var(--sans); }
 a { color: var(--navy); text-underline-offset: 2px; }
-.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 .proto-banner { font-size: .8rem; font-weight: 500; background: var(--amber); color: #1b1300; padding: .45rem 1rem; text-align: center; }
 .proto-banner a { color: #1b1300; }
@@ -90,9 +102,9 @@ section h2 { font-size: 1.2rem; font-weight: 600; color: var(--navy); margin: 2.
 .body { counter-reset: sec; max-width: 44rem; }
 .body h2 { counter-increment: sec; font-size: 1.15rem; font-weight: 600; color: var(--navy); margin: 2.25rem 0 .6rem; padding-top: .8rem; border-top: 1px solid var(--navy); }
 .body h2::before { content: counter(sec) ". "; content: counter(sec) ". " / ""; color: var(--amber-text); }
-.anchor { color: #7d8996; text-decoration: none; font-weight: 400; margin-left: .3rem; }
+.anchor { color: var(--muted); text-decoration: none; font-weight: 400; }
 .anchor:focus-visible { color: var(--navy); outline: 2px solid var(--navy); outline-offset: 2px; }
-h2:hover .anchor { color: var(--navy); }
+h2:hover .anchor, h3:hover .anchor { color: var(--navy); }
 blockquote.statement { margin: 1.25rem 0; padding: 1rem 1.25rem; background: var(--navy); color: #fff; font-size: 1.25rem; font-weight: 600; border-radius: 4px; }
 blockquote.pull { margin: 1.25rem 0; padding: .25rem 0 .25rem 1rem; border-left: 4px solid var(--amber); font-family: var(--serif); font-style: italic; font-size: 1.1rem; }
 .narrative { font-family: var(--serif); font-style: italic; font-size: 1.1rem; max-width: 44rem; }
@@ -229,7 +241,7 @@ a.pos-prev, a.pos-next { text-decoration: none; }
   .page-handout .questions li { padding-top: .1rem; padding-bottom: .1rem; }
   .page-handout .site-header { margin-bottom: .3rem; }
 }
-@page { margin: .6in; }
+@page { margin: .5in; }
 
 /* Oct 24: calculator examples, 100-crew grid, simulation, cylinder */
 .calc-presets { display: flex; flex-wrap: wrap; gap: .5rem; margin: .75rem 0; }
@@ -265,7 +277,7 @@ a.pos-prev, a.pos-next { text-decoration: none; }
 }
 svg .leader { stroke: var(--navy); stroke-width: 1; }
 .cite-apa, .cite p { overflow-wrap: anywhere; }
-@media (max-width: 30rem) { table.data { display: block; overflow-x: auto; } }
+.table-scroll { overflow-x: auto; }
 @media (max-width: 30rem) { .glance dl { grid-template-columns: minmax(0, 1fr); } .glance dd { border-top: 0; padding-top: 0; } }
 /* Oct 24 visual review: matching box widths, header aligned with wide pages, placeholders, print */
 .key-idea, .toc { max-width: 44rem; }
@@ -292,3 +304,51 @@ table.dated td:first-child { white-space: nowrap; }
 @media print { .print-hint { display: none; } }
 /* Oct 26: short clips hosted on the site, shown with the browser's own player */
 .video-figure video { display: block; width: 100%; height: auto; background: var(--ink); border-radius: 3px; }
+/* Oct 26 review fixes */
+/* Skip link: hidden until it has keyboard focus */
+.skip-link { position: absolute; left: .5rem; top: -3rem; z-index: 10; background: #fff; color: var(--navy); font: 600 .9rem var(--sans); padding: .5rem .8rem; border: 2px solid var(--navy); border-radius: 3px; }
+.skip-link:focus { top: .5rem; }
+/* The footer meets the bottom of the window on short pages */
+body { min-height: 100vh; display: flex; flex-direction: column; }
+body > main { flex: 1 0 auto; width: 100%; }
+.site-footer { margin-top: auto; }
+/* 404: one column, no empty contents column */
+main.not-found { display: block; max-width: 44rem; }
+/* Home: a way into the content on the first screen */
+.hero-links { font: 400 1rem/1.5 var(--sans); margin: 0 0 1.5rem; }
+/* Bylines link to About and the paper; keep the author's name looking like a name */
+a.author { color: var(--ink); }
+/* Tables keep their full width; narrow screens scroll the wrapper, not the table */
+.table-scroll > table.data { margin-top: 0; }
+.table-scroll { margin: 1rem 0; }
+/* Cases by factor: the factor numbers alone on the narrowest phones */
+@media (max-width: 22rem) {
+  .th-name { display: none; }
+  .factor-table th, .factor-table td { padding-left: .25rem; padding-right: .25rem; }
+}
+/* Diagrams drawn as images get the whole column on phones, so their labels stay readable */
+@media (max-width: 30rem) { .diagram { padding: .5rem 0; background: none; } }
+/* A photo that only exists small is shown no larger than it is */
+.photo-natural img { max-width: 640px; margin: 0 auto; }
+/* About: then-and-now photos at one shape; a lone 4:3 photo across the grid */
+.photo-pair img { aspect-ratio: 1 / 1; object-fit: cover; object-position: center 25%; }
+.photo-grid .photo-wide { grid-column: 1 / -1; }
+.photo-grid .photo-wide img { max-width: 30rem; }
+@media print {
+  /* Videos cannot play on paper: hide the players, keep the self-hosted posters without controls, print where to watch */
+  .video { display: none; }
+  .video-figure video::-webkit-media-controls { display: none !important; }
+  figcaption[data-watch]::after { content: " Watch: " attr(data-watch) "."; }
+  /* Photos no taller than about a third of a page */
+  .diagram img, .photo-grid img, .photo-side img, .photo-natural img { max-height: 3.5in; width: auto; max-width: 100%; margin: 0 auto; }
+  .photo-side { float: none; width: auto; }
+  /* Citations stay on screen; the license line keeps its address but short */
+  .cite { display: none; }
+  .license-line a[href^="https://creativecommons.org"]::after { content: " (creativecommons.org/licenses/by-sa/4.0)"; }
+  .license-line { break-before: avoid; margin-top: .25rem; margin-bottom: 0; font-size: .8rem; }
+  main { padding-bottom: 0; }
+  .table-scroll { overflow: visible; }
+  .skip-link, .related { display: none; }
+  body { display: block; min-height: 0; }
+}
+@media print { .page-handout .table-scroll { margin: .2rem 0; } .page-handout .print-hint { display: none; } .page-handout main { padding-bottom: 0; } .page-handout .handout-credit { margin-top: .6rem; padding-top: .3rem; } }

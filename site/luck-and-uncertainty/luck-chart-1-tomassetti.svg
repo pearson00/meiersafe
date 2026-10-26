@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 510" width="640" height="510" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 548" width="640" height="548" role="img" aria-labelledby="t d">
   <title id="t">Skill and luck determine performance</title>
-  <desc id="d">Skill on a left-hand scale from 0 to 100 and luck on a right-hand scale from 0 to 100. Between them stands a Performance Level column shading from Bad (red) at the bottom through OK (orange and yellow) and Good (yellow-green) to Great (green) at the top. A dashed line runs from a high skill point near the top of the left scale down to a low luck point on the right scale, crossing the column's centre line in the Good region, which marks the resulting performance. After Art Tomassetti's chart in Flight Test Safety Fact, May 2021.</desc>
+  <desc id="d">Skill on a left-hand scale from 0 to 100 and luck on a right-hand scale from 0 to 100. Between them stands a Performance Level column shading from Bad (red) at the bottom through OK (orange and yellow) and Good (yellow-green) to Great (green) at the top. A dashed line runs from a high skill point near the top of the left scale down to a low luck point on the right scale, crossing the column's centre line in the Good region, which marks the resulting performance. After Art Tomassetti's chart in Flight Test Safety Fact, May 2021; the source is noted under the chart.</desc>
   <defs>
     <linearGradient id="perf" x2="0" y2="1">
       <stop offset="0" stop-color="#2e9e44"/>
@@ -14,37 +14,38 @@
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#55626f"/></marker>
     <path id="x" d="M-11 -11L11 11M11 -11L-11 11" fill="none" stroke="#14202b" stroke-width="5" stroke-linecap="round"/>
   </defs>
-  <rect width="640" height="510" fill="#ffffff"/>
+  <rect width="640" height="548" fill="#ffffff"/>
 
   <!-- Performance Level column -->
   <rect x="245" y="34" width="110" height="390" rx="3" fill="url(#perf)"/>
-  <line x1="300" y1="34" x2="300" y2="428" stroke="#14202b" stroke-width="1.5"/>
+  <path d="M300 34V44M300 74V144M300 172V266M300 298V340M300 372V428" stroke="#14202b" stroke-width="1.5"/>
 
   <!-- Skill axis (left) and luck axis (right) -->
   <line x1="53" y1="392" x2="53" y2="56" stroke="#55626f" stroke-width="1.5" marker-end="url(#arrow)"/>
   <line x1="566" y1="410" x2="566" y2="72" stroke="#55626f" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   <g font-family="'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <g font-size="16" fill="#14202b" text-anchor="middle">
-      <text x="53" y="44">100</text>
-      <text x="58" y="412">0</text>
-      <text x="566" y="60">100</text>
-      <text x="569" y="430">0</text>
-      <text x="300" y="447">Performance</text>
-      <text x="300" y="470">Level</text>
+    <g font-size="22" fill="#14202b" text-anchor="middle">
+      <text x="53" y="42">100</text>
+      <text x="58" y="416">0</text>
+      <text x="566" y="58">100</text>
+      <text x="569" y="434">0</text>
+      <text x="300" y="452">Performance</text>
+      <text x="300" y="478">Level</text>
     </g>
-    <rect x="18" y="196" width="70" height="28" fill="#ffffff"/>
-    <rect x="530" y="222" width="72" height="28" fill="#ffffff"/>
-    <g font-size="16" font-weight="500" fill="#14202b" text-anchor="middle" letter-spacing=".04em">
-      <text x="53" y="216">SKILL</text>
-      <text x="566" y="242">LUCK</text>
+    <rect x="8" y="192" width="90" height="34" fill="#ffffff"/>
+    <rect x="524" y="218" width="84" height="34" fill="#ffffff"/>
+    <g font-size="22" font-weight="500" fill="#14202b" text-anchor="middle" letter-spacing=".04em">
+      <text x="53" y="217">SKILL</text>
+      <text x="566" y="243">LUCK</text>
     </g>
     <g font-size="23" font-weight="600" fill="#14202b" text-anchor="middle">
-      <text x="300" y="66">Great</text>
-      <text x="300" y="178">Good</text>
-      <text x="300" y="292">OK</text>
-      <text x="300" y="366">Bad</text>
+      <text x="300" y="68">Great</text>
+      <text x="300" y="166">Good</text>
+      <text x="300" y="290">OK</text>
+      <text x="300" y="364">Bad</text>
     </g>
+    <text x="320" y="530" font-size="18" fill="#55626f" text-anchor="middle">Art Tomassetti – Flight Test Safety Fact – May 2021</text>
   </g>
 
   <!-- Skill point, luck point, and the dashed line joining them -->

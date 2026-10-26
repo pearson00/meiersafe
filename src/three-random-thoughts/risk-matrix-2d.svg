@@ -12,9 +12,9 @@
   <rect width="720" height="446" fill="#ffffff"/>
 
   <g font-family="'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <text x="430" y="20" text-anchor="middle" font-size="14" fill="#55626f">Likelihood of occurrence</text>
-    <text transform="translate(22 244) rotate(-90)" text-anchor="middle" font-size="14" fill="#55626f">Severity of consequence</text>
-    <g font-size="15" font-weight="500" fill="#14202b">
+    <text x="430" y="20" text-anchor="middle" font-size="18" fill="#55626f">Likelihood of occurrence</text>
+    <text transform="translate(18 244) rotate(-90)" text-anchor="middle" font-size="18" fill="#55626f">Severity of consequence</text>
+    <g font-size="20" font-weight="500" fill="#14202b">
       <g text-anchor="middle">
         <text x="214" y="50">Frequent</text>
         <text x="322" y="50">Probable</text>
@@ -23,11 +23,11 @@
         <text x="646" y="50">Improbable</text>
       </g>
       <g text-anchor="end">
-        <text x="150" y="104">Catastrophic</text>
-        <text x="150" y="176">Hazardous</text>
-        <text x="150" y="248">Major</text>
-        <text x="150" y="320">Minor</text>
-        <text x="150" y="392">No Effect</text>
+        <text x="152" y="106">Catastrophic</text>
+        <text x="152" y="178">Hazardous</text>
+        <text x="152" y="250">Major</text>
+        <text x="152" y="322">Minor</text>
+        <text x="152" y="394">No Effect</text>
       </g>
     </g>
   </g>

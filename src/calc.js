@@ -8,6 +8,7 @@
   var out = document.getElementById("calc-out");
   var odds = document.getElementById("calc-odds");
   var half = document.getElementById("calc-half"); // optional: decisions until failure passes 50%
+  var halfUnit = document.getElementById("calc-half-unit"); // optional: "decision(s)" after it
   var grid = document.getElementById("calc-grid"); // optional: 100 squares
   var gridNote = document.getElementById("calc-grid-note");
   var run = document.getElementById("calc-run");
@@ -46,7 +47,7 @@
     var ns = count(n.value);
     if (!(pv > 0 && pv < 100) || !(ns >= 1)) {
       out.textContent = "–";
-      odds.textContent = "enter a percentage below 100 and a whole number of times";
+      odds.textContent = "enter a percentage between 0 and 100 and a whole number of decisions";
       if (half) half.textContent = "–";
       current = null;
       if (run) run.disabled = true;
@@ -59,22 +60,33 @@
     }
     // Work from the chance of failure each time, so many nines (99.999) keep their precision.
     var q = (100 - pv) / 100;
-    if (half) half.textContent = Math.ceil(Math.log(0.5) / Math.log1p(-q)).toLocaleString("en-US");
+    // The first count at which failure is more likely than not (strictly above 50%).
+    if (half) {
+      var h = Math.floor(Math.log(0.5) / Math.log1p(-q)) + 1;
+      half.textContent = h.toLocaleString("en-US");
+      if (halfUnit) halfUnit.textContent = h === 1 ? "decision" : "decisions";
+    }
     var fail = -Math.expm1(ns * Math.log1p(-q));
     var pct = fail * 100;
-    // Rounding would show a near-certain failure as "100%", which reads as certain.
-    out.textContent = pct >= 99.95
-      ? ">99.9%"
-      : (pct < 10
-        ? pct.toLocaleString("en-US", { maximumSignificantDigits: 2 })
-        : Math.round(pct)) + "%";
+    // Rounding would show a near-certain failure as "100%", which reads as certain: from 99%
+    // up, round down to a tenth, and above 99.9% say so.
+    var shown = pct >= 99.95
+      ? null
+      : pct >= 99
+        ? Math.floor(pct * 10) / 10
+        : pct < 10
+          ? Number(pct.toPrecision(2))
+          : Math.round(pct);
+    out.textContent = shown === null ? ">99.9%" : shown.toLocaleString("en-US") + "%";
+    // The words follow the number shown, so "95%" never reads "about 9 chances in 10".
     // "One chance in N" only reads sensibly while failure is the less likely outcome; above
     // half, say it in tenths ("one chance in 1" was what 78% used to show).
+    var shownFail = shown === null ? 1 : shown / 100;
     var oneIn = 1 / fail;
-    odds.textContent = fail >= 0.95
+    odds.textContent = shownFail >= 0.95
       ? "close to certain"
-      : fail >= 0.5
-        ? "about " + Math.round(fail * 10) + " chances in 10"
+      : shownFail >= 0.5
+        ? "about " + Math.round(shownFail * 10) + " chances in 10"
         : "about one chance in " + (oneIn < 10 ? Math.round(oneIn) : Math.round(oneIn).toLocaleString("en-US"));
 
     current = { fail: fail };
