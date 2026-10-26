@@ -289,3 +289,4 @@ table.dated td:first-child { white-space: nowrap; }
 .photo-side img { display: block; width: 100%; max-width: 20rem; height: auto; border-radius: 3px; }
 @media (min-width: 40rem) { .photo-side { float: right; width: 14rem; margin: .3rem 0 1rem 1.5rem; } }
 #versions { clear: both; }
+@media print { .print-hint { display: none; } }
