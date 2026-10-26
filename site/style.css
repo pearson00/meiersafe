@@ -290,3 +290,5 @@ table.dated td:first-child { white-space: nowrap; }
 @media (min-width: 40rem) { .photo-side { float: right; width: 14rem; margin: .3rem 0 1rem 1.5rem; } }
 #versions { clear: both; }
 @media print { .print-hint { display: none; } }
+/* Oct 26: short clips hosted on the site, shown with the browser's own player */
+.video-figure video { display: block; width: 100%; height: auto; background: var(--ink); border-radius: 3px; }
