@@ -191,6 +191,9 @@ table.data tr.hl { background: var(--amber-tint); }
 .case-cards { list-style: none; padding: 0; display: grid; gap: .9rem; }
 .case-cards li { border: 1px solid var(--rule); border-radius: 4px; padding: .9rem 1.1rem; }
 .case-cards li > a strong, .case-cards li > strong { font-size: 1.1rem; }
+.case-cards li > a { text-decoration: none; }
+.case-cards li > a strong { font-family: var(--sans); font-weight: 600; color: var(--navy); }
+.case-cards li > a strong::after { content: " →"; color: var(--amber-text); }
 .case-meta { display: block; font: 400 .85rem/1.4 var(--sans); color: var(--muted); }
 .case-cards li p { margin: .4rem 0 0; }
 .case-cards .source-flag { margin-top: .5rem; }
@@ -352,3 +355,17 @@ a.author { color: var(--ink); }
   body { display: block; min-height: 0; }
 }
 @media print { .page-handout .table-scroll { margin: .2rem 0; } .page-handout .print-hint { display: none; } .page-handout main { padding-bottom: 0; } .page-handout .handout-credit { margin-top: .6rem; padding-top: .3rem; } }
+
+/* Phones: the header nav on one line; the briefing outline as stacked rows, each cell labelled */
+@media screen and (max-width: 26rem) { .site-nav { gap: .25rem .85rem; font-size: .86rem; } }
+@media screen and (max-width: 40rem) {
+  table.outline thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  table.outline, table.outline tbody, table.outline tr, table.outline td { display: block; }
+  table.outline caption { display: block; }
+  table.outline tr { padding: .6rem 0; border-bottom: 1px solid var(--rule); }
+  table.outline td { border: 0; padding: .15rem 0; }
+  table.outline td::before { font-weight: 600; }
+  table.outline td:nth-child(1)::before { content: "Minutes (20 · 30): "; }
+  table.outline td:nth-child(3)::before { content: "Show: "; }
+  table.outline td:nth-child(4)::before { content: "Page: "; }
+}
