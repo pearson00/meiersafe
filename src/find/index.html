@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search and site index · meiersafe.com</title>
+<meta name="description" content="Search every page of meiersafe.com, or browse the full list of pages and their sections.">
+<link rel="icon" href="{{ROOT}}favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="{{ROOT}}style.css">
+</head>
+<body class="page-article">
+<!--#header-->
+
+<main id="main" class="article find">
+  <nav class="position" aria-label="Section">
+    <span class="pos-here">Search and site index</span>
+  </nav>
+
+  <h1>Find: <span class="subtitle">search the site, or browse every page</span></h1>
+
+  <div class="find-search" id="find-search" hidden>
+    <label class="find-label" for="find-q">Search the site</label>
+    <input class="find-input" id="find-q" type="search" autocomplete="off" spellcheck="false" placeholder="A word, a name or a phrase, e.g. smearing, Challenger, Glacier Point">
+    <p class="find-status" id="find-status" role="status" aria-live="polite"></p>
+    <ol class="find-results" id="find-results"></ol>
+  </div>
+
+  <div class="body find-index">
+    <h2 id="site-index">Every page&nbsp;<a class="anchor" href="#site-index" aria-hidden="true" tabindex="-1">#</a></h2>
+<!--#siteindex-->
+  </div>
+</main>
+
+<!--#footer-->
+<script src="{{ROOT}}find.js"></script>
+</body>
+</html>

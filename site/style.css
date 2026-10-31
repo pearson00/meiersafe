@@ -369,3 +369,27 @@ a.author { color: var(--ink); }
   table.outline td:nth-child(3)::before { content: "Show: "; }
   table.outline td:nth-child(4)::before { content: "Page: "; }
 }
+
+/* Find page: search box, results, and the index of every page (reached from the footer) */
+.find-search { margin: 0 0 1.5rem; max-width: 44rem; }
+.find-label { display: block; font: 600 .75rem var(--sans); text-transform: uppercase; letter-spacing: .1em; color: var(--navy); margin: 0 0 .35rem; }
+.find-input { width: 100%; font: 400 1.05rem var(--sans); padding: .6rem .75rem; border: 2px solid var(--navy); border-radius: 3px; background: #fff; color: var(--ink); }
+.find-input:focus { outline: 3px solid var(--amber); outline-offset: 1px; }
+.find-status { font: .88rem var(--sans); color: var(--muted); margin: .5rem 0; }
+.find-status:empty { display: none; }
+.find-results { list-style: none; padding: 0; margin: 0; }
+.find-results li { padding: .6rem 0; border-bottom: 1px solid var(--rule); }
+.find-hit { font-family: var(--sans); font-weight: 500; }
+.find-where { font-weight: 600; }
+.find-snippet { font-size: .92rem; margin: .2rem 0 0; color: var(--ink); overflow-wrap: anywhere; }
+.find mark { background: var(--amber-tint); color: inherit; box-shadow: inset 0 -2px 0 var(--amber); }
+.find-index h2::before { content: none; }
+.si-group { font: 600 .75rem var(--sans); text-transform: uppercase; letter-spacing: .1em; color: var(--navy); margin: 1.5rem 0 .4rem; }
+.si-pages { list-style: none; padding: 0; margin: 0; }
+.si-pages > li { padding: .5rem 0; border-bottom: 1px solid var(--rule); }
+.si-page { font-family: var(--sans); font-weight: 600; }
+.si-desc { display: block; font-size: .9rem; color: var(--muted); }
+.si-sections { font: .85rem/1.5 var(--sans); margin: .3rem 0 0; padding-left: 1.1rem; }
+.si-subs { color: var(--muted); }
+.si-subs::before { content: " — "; }
+@media print { .find-search { display: none; } }

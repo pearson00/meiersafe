@@ -94,6 +94,9 @@ find site -name '*.html' | while read -r f; do
   fi
 done
 
+# The Find page: search index and the list of every page and its sections.
+python3 scripts/site_index.py site
+
 # Link previews, author data and the site map (Mike's yes to S1-S4, October 25, 2026).
 python3 scripts/head_meta.py site
 
