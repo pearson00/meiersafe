@@ -7,7 +7,8 @@
   var q = document.getElementById("find-q");
   var status = document.getElementById("find-status");
   var list = document.getElementById("find-results");
-  if (!box || !q || !status || !list) return;
+  var script = document.currentScript;
+  if (!box || !q || !status || !list || !script) return;
   box.hidden = false;
 
   var MAX = 40;
@@ -17,7 +18,8 @@
 
   function load() {
     if (!loading) {
-      loading = fetch("index.json")
+      // Resolved from this script's own address (the site root), so /find without a slash works too.
+      loading = fetch(new URL("find/index.json", script.src))
         .then(function (r) {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.json();

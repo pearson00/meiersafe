@@ -20,7 +20,7 @@ MARKER = "<!--#siteindex-->"
 
 # Nothing inside these is page text: the reading-position bar, the on-page contents,
 # the "#" anchors beside headings, scripts and drawings.
-SKIP_CLASSES = {"position", "toc", "anchor"}
+SKIP_CLASSES = {"position", "toc", "anchor", "next-up"}  # next-up describes the next page, not this one
 SKIP_TAGS = {"script", "style", "svg", "button", "template"}
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"}
 SECTION_TAGS = {"h2": 2, "h3": 3, "dt": 3}
@@ -136,6 +136,9 @@ for path in sorted(SITE.rglob("*.html")):
     pages.append({"u": url, "n": name, "d": desc, "pos": html.unescape(pos.group(1)) if pos else "",
                   "section": section.group(1) if section else "", "sections": sections})
 
+for p in pages:
+    if not any(s["t"] for s in p["sections"]):
+        raise SystemExit(f"site_index: {p['u'] or 'home'} gave no searchable text; check its <main> markup")
 pages.sort(key=order_key)
 for i, p in enumerate(pages):
     for s in p["sections"]:
