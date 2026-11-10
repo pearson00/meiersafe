@@ -1,13 +1,17 @@
-"""Add link-preview tags and author data to every built page, and write sitemap.xml.
+"""Add link-preview tags and author data to every built page, and write sitemap.xml and llms.txt.
 
 Run by build.sh after site/ is assembled. Each page's title, description and
 canonical address are read from its own head, so the tags never drift from the page.
-Fails loudly if a page lacks any of the three.
+Fails loudly if a page lacks any of the three. A page's sitemap lastmod is the date
+of the last commit to its source in src/, or today if the source has uncommitted
+changes or has never been committed.
 """
 
+import datetime
 import html
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -29,6 +33,20 @@ PAPER = {
     "datePublished": "2015",
     "url": f"{ORIGIN}/the-paper/",
 }
+
+
+def lastmod(page: Path) -> str:
+    """Date the page's source last changed: its last commit, or today if edited since."""
+    src = Path("src") / page.relative_to(SITE)
+    if not src.is_file():
+        raise SystemExit(f"head_meta: {page} has no source at {src}")
+    dirty = subprocess.run(["git", "status", "--porcelain", "--", str(src)],
+                           capture_output=True, text=True, check=True).stdout.strip()
+    committed = subprocess.run(["git", "log", "-1", "--format=%cs", "--", str(src)],
+                               capture_output=True, text=True, check=True).stdout.strip()
+    if dirty or not committed:
+        return datetime.date.today().isoformat()
+    return committed
 
 
 def one(pattern: str, text: str, page: Path) -> str:
@@ -76,10 +94,21 @@ for page in sorted(SITE.rglob("*.html")):
     ])
     marker = f'<link rel="canonical" href="{url}">'
     page.write_text(text.replace(marker, marker + "\n" + tags, 1))
-    urls.append(url)
+    urls.append((url, lastmod(page), name, html.unescape(desc)))
 
 lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-lines += [f"  <url><loc>{html.escape(u)}</loc></url>" for u in urls]
+lines += [f"  <url><loc>{html.escape(u)}</loc><lastmod>{d}</lastmod></url>" for u, d, _, _ in urls]
 lines.append("</urlset>")
 (SITE / "sitemap.xml").write_text("\n".join(lines) + "\n")
-print(f"head_meta: {len(urls)} pages tagged; sitemap.xml written")
+
+# llms.txt (llmstxt.org): the site's pages for AI tools, home page first.
+home = [p for p in urls if p[0] == f"{ORIGIN}/"]
+if len(home) != 1:
+    raise SystemExit("head_meta: llms.txt needs exactly one home page")
+llms = ["# meiersafe.com", "", f"> {home[0][3]}", "",
+        "Mike Meier's writing on flight-test safety, built on his 2015 SETP paper "
+        "\"Lessons Learned and Murphy's Corollary\". Text licensed CC BY-SA 4.0 "
+        f"({ORIGIN}/license/).", "", "## Pages", ""]
+llms += [f"- [{n}]({u}): {d}" for u, _, n, d in home + [p for p in urls if p not in home]]
+(SITE / "llms.txt").write_text("\n".join(llms) + "\n")
+print(f"head_meta: {len(urls)} pages tagged; sitemap.xml and llms.txt written")

@@ -1,0 +1,33 @@
+# meiersafe.com
+
+> Anything that did not go wrong could not have gone wrong. Mike Meier's framework for why repeated success hides risk in flight test.
+
+Mike Meier's writing on flight-test safety, built on his 2015 SETP paper "Lessons Learned and Murphy's Corollary". Text licensed CC BY-SA 4.0 (https://meiersafe.com/license/).
+
+## Pages
+
+- [Lessons Learned and Murphy's Corollary](https://meiersafe.com/): Anything that did not go wrong could not have gone wrong. Mike Meier's framework for why repeated success hides risk in flight test.
+- [About Mike Meier](https://meiersafe.com/about/): Mike Meier tested hang gliders for Wills Wing for 45 years. He joined the Society of Experimental Test Pilots in 1994 and was made a Fellow in 2026.
+- [Analyze your successes](https://meiersafe.com/analyzing-success/): Set a quantitative safety metric and a target beforehand, then measure every success against it. The remedy in Mike Meier's framework.
+- [Briefing handout](https://meiersafe.com/briefing/handout/): A one-page briefing handout: Mike Meier's two premises, three factors and remedy, the odds of repeated go decisions, and five questions.
+- [Briefing Kit](https://meiersafe.com/briefing/): For safety officers and instructors: a briefing outline, Mike's talk and slides, printable pages, every discussion question in one place, and how to credit the material.
+- [Apollo 1](https://meiersafe.com/case-studies/apollo-1/): NASA had a history of success with a pressurized pure-oxygen environment in manned capsules, until Apollo 1. A case study in Mike Meier's three factors.
+- [The 2015 certification launch](https://meiersafe.com/case-studies/certification-launch-2015/): With a world championship weeks away and a glider to certify, Mike Meier launched in a wind that wasn't going to improve. A case study in the pressure to go.
+- [Challenger](https://meiersafe.com/case-studies/challenger/): Shuttles flew on with O-ring erosion and blow-by in the booster joints, and each success widened what was accepted. A case study in Mike Meier's framework.
+- [Columbia](https://meiersafe.com/case-studies/columbia/): Shuttles re-entered and landed with heat-shield tiles damaged by foam shed from the external tank, until Columbia. A case study in Mike Meier's three factors.
+- [The F-86 aileron bolt](https://meiersafe.com/case-studies/f-86-aileron-bolt/): F-86 crashes traced to an aileron bolt installed upside down. Murphy's Law at its root: if a part can be fitted wrong, design that possibility out.
+- [Case studies](https://meiersafe.com/case-studies/): Six cases read against Mike Meier's three factors: two of his own hang gliding events, Apollo 1, Challenger, Columbia and the F-86 aileron bolt.
+- [The 1995 top landing](https://meiersafe.com/case-studies/top-landing-1995/): After some 1,500 successful top landings, a flawless approach ended in a crash. The case where Murphy's Corollary was first recognized.
+- [Deceptive mathematics](https://meiersafe.com/deceptive-mathematics/): A go decision that succeeds 99 percent of the time, made 18 times, fails at least once one time in six. Factor I of Mike Meier's framework.
+- [Search and site index](https://meiersafe.com/find/): Search every page of meiersafe.com, or browse the full list of pages and their sections.
+- [The framework](https://meiersafe.com/framework/): Mike Meier's argument step by step: two premises, three factors that work together against good decisions, and a remedy.
+- [Glossary](https://meiersafe.com/glossary/): The terms of Mike Meier's framework, from the go decision to smearing and owning the risk, each in a sentence or two with a link to its page.
+- [License](https://meiersafe.com/license/): Mike Meier's text and diagrams are CC BY-SA 4.0: copy, adapt and share them with credit. A credit line to copy, and what the license excludes.
+- [Luck and uncertainty](https://meiersafe.com/luck-and-uncertainty/): Skill, judgment, unknowns and luck. Mike Meier's 2021 extension of the framework, after Art Tomassetti's chart in Flight Test Safety Fact.
+- [Murphy's Corollary](https://meiersafe.com/murphys-corollary/): We don't believe Murphy's Law, yet we take a positive outcome as proof that it was inevitable. Factor II of Mike Meier's framework.
+- [Origins](https://meiersafe.com/origins/): From a hang-gliding accident in 1995 to a 1998 article, the 2015 SETP paper, and further thoughts in 2021 and 2025.
+- [The pressure to go](https://meiersafe.com/pressure-to-go/): A go decision relieves the pressure; a no-go only increases it. Factor III of Mike Meier's framework, with the February 2015 certification launch.
+- [Hard questions](https://meiersafe.com/questions/): Three questions the framework raises, in Mike Meier's words: aviation's capricious forgiveness, the limits of 'safe enough', and a crow.
+- [Speaking](https://meiersafe.com/speaking/): Fifteen presentations of Lessons Learned and Murphy's Corollary from 2015 to 2018, and the 2024 episode of On Condition, the Flight Test Safety Committee's podcast.
+- [The paper (SETP, 2015)](https://meiersafe.com/the-paper/): Mike Meier's 2015 paper to the Society of Experimental Test Pilots: abstract, where to read it, how to cite it.
+- [Three Random Thoughts On Safety](https://meiersafe.com/three-random-thoughts/): Organizational safety culture, the 2D risk matrix and owning the risk. Mike Meier's 2025 brief to the SETP, SFTE and AIAA technical meeting.
