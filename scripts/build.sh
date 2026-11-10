@@ -4,11 +4,13 @@
 # {{ROOT}} becomes the relative path to the site root, and the nav item named by
 # the page's data-section gets aria-current ("page" on the section's own page, "true" below it).
 # Every page except 404 gets a canonical link to its meiersafe.com address.
-# DRAFT=1 (the default until launch) adds noindex to every page; build with DRAFT=0 to launch.
+# The site is live (launched 2026-11-10): the default build is the launch build (DRAFT=0), which
+# refuses to finish while any draft marker remains. DRAFT=1 adds noindex to every page; use it only
+# for a branch preview, never for main.
 # Designs A-C are retired to archive/ (tag prototypes-abcd builds all four).
 set -eu
 cd "$(dirname "$0")/.."
-DRAFT=${DRAFT:-1}
+DRAFT=${DRAFT:-0}
 
 rm -rf site
 mkdir -p site
