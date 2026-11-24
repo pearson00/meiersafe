@@ -36,3 +36,5 @@
 /author/* /about/ 301
 /category/* / 301
 /feed/* / 301
+/comments/* / 301
+/about-mike- /about/ 301

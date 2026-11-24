@@ -59,6 +59,8 @@ cat > site/_redirects <<'EOF'
 /author/* /about/ 301
 /category/* / 301
 /feed/* / 301
+/comments/* / 301
+/about-mike- /about/ 301
 EOF
 
 find site -name '*.html' | while read -r f; do
