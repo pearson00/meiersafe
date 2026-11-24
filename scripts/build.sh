@@ -114,11 +114,12 @@ Allow: /
 Sitemap: https://meiersafe.com/sitemap.xml
 EOF
 
-# Security headers: HTTPS only, and nothing loads from anywhere but this site, except the Vimeo player.
+# Security headers: HTTPS only, and nothing loads from anywhere but this site, except the Vimeo player
+# and Cloudflare's cookie-free Web Analytics beacon (injected by Cloudflare; the rebuild plan's analytics choice).
 cat > site/_headers <<'EOF'
 /*
   Strict-Transport-Security: max-age=31536000
-  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; media-src 'self'; frame-src https://player.vimeo.com; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; style-src 'self'; img-src 'self' data:; font-src 'self'; media-src 'self'; frame-src https://player.vimeo.com; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
 EOF
